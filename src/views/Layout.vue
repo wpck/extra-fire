@@ -1,10 +1,13 @@
 <template>
+  <!-- 顶部系统信息标题栏 -->
   <div class="top">信息聚合平台</div>
 
   <div class="layout">
+    <!-- 系统菜单 -->
     <el-menu :default-active="activeIndex" class="menu" router>
       <el-menu-item v-for="item in menuList" index="/index">{{ item.title }}</el-menu-item>
     </el-menu>
+    <!-- 系统内容展示区域 -->
     <div class="content">
       <router-view></router-view>
     </div>
@@ -40,7 +43,7 @@ const menuList: Array<{ index: string; title: string }> = [
   display: flex;
   .menu {
     width: 160px;
-    background-color: var(--el-bg-color-page);
+    background-color: var(--el-color-primary-light-9);
   }
   .content {
     flex: 1;
