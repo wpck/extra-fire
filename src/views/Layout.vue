@@ -5,7 +5,7 @@
   <div class="layout">
     <!-- 系统菜单 -->
     <el-menu :default-active="activeIndex" class="menu" router>
-      <el-menu-item v-for="item in menuList" index="/index">{{ item.title }}</el-menu-item>
+      <el-menu-item v-for="item in menuList" :index="item.index">{{ item.title }}</el-menu-item>
     </el-menu>
     <!-- 系统内容展示区域 -->
     <div class="content">
@@ -47,6 +47,8 @@ const menuList: Array<{ index: string; title: string }> = [
   }
   .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

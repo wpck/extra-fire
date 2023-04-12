@@ -4,28 +4,29 @@
     <div v-for="item in moduleList" class="top-item">{{ item.label }} {{ moduleData[item.key] }}篇</div>
   </div>
 
-  <!-- 搜索区域 -->
-  <div class="search">
-    <el-input v-model="searchKey" placeholder="请输入" class="input-with-select">
-      <template #append>
-        <el-button :icon="Search" />
-      </template>
-    </el-input>
-  </div>
+  <div class="bottom">
+    <!-- 搜索区域 -->
+    <SearchInp />
 
-  <div class="main">
-    <div class="content">
-      <div v-for="item in list">
-        <ItemTitle :data="item" />
+    <div class="main">
+      <!-- 列表展示区域 -->
+      <IndexList :list="list" />
+
+      <!-- 热词区 -->
+      <div class="side">
+        <div class="hot-title">热词</div>
+        <div v-for="(item, index) in hotWord" class="hot-word">
+          <span class="mr-2">{{ index + 1 }}</span>
+          {{ item }}
+        </div>
       </div>
     </div>
-    <div class="side"></div>
   </div>
 </template>
 <script lang="ts" setup>
-import { Search } from '@element-plus/icons-vue'
 import { ref } from 'vue'
-import ItemTitle from '@/components/ItemTitle.vue'
+import IndexList from '@/components/IndexList.vue'
+import SearchInp from '@/components/SearchInp.vue'
 
 const moduleList = [
   { label: '事故报告', key: 'malfunction' },
@@ -59,8 +60,7 @@ const list = ref<any[]>([
   },
 ])
 
-// 搜索关键字
-const searchKey = ref<string>('')
+const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
 </script>
 
 <style scoped lang="scss">
@@ -78,18 +78,20 @@ const searchKey = ref<string>('')
     }
   }
 }
-.search {
-  width: 80%;
-  margin: 20px auto;
+.bottom {
+  flex: 1;
+  overflow: auto;
 }
 .main {
   display: flex;
   padding: 0 16px;
-  .content {
-    flex: 1;
-  }
   .side {
     width: 160px;
+    margin-left: 20px;
+    line-height: 32px;
+    .hot-title {
+      font-weight: 600;
+    }
   }
 }
 </style>
