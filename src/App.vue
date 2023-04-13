@@ -1,5 +1,3 @@
-import { zhCn } from 'element-plus/es/locale';
-
 <template>
   <el-config-provider :locale="zhCN">
     <router-view></router-view>

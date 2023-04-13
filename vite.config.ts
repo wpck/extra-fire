@@ -11,6 +11,18 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  css: {
+    // css 预处理器
+    preprocessorOptions: {
+      // 引入 全局.scss, 最后别忘了加上 ;
+      scss: {
+        additionalData: `
+          @import "@/assets/global.scss";
+          @import "element-plus/theme-chalk/src/common/var.scss";
+          `,
+      },
+    },
+  },
   plugins: [
     vue(),
     AutoImport({

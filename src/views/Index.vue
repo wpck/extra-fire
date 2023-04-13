@@ -69,7 +69,7 @@ const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
   justify-content: space-between;
   &-item {
     flex: 1;
-    background: var(--el-color-primary-light-7);
+    background: var(--el-color-primary-light-9);
     text-align: center;
     padding: 20px 0;
     border-left: 1px solid var(--el-color-primary-dark-2);
@@ -84,7 +84,7 @@ const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
 }
 .main {
   display: flex;
-  padding: 0 16px;
+  padding: 0 $content-padding;
   .side {
     width: 160px;
     margin-left: 20px;

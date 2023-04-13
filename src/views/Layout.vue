@@ -15,7 +15,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-const activeIndex = ref<string>('1')
+const activeIndex = ref<string>(location.hash.substring(1) || '/index') // 左侧菜单当前定位的菜单项)
 
 const menuList: Array<{ index: string; title: string }> = [
   { index: '/index', title: '首页' },
@@ -43,7 +43,16 @@ const menuList: Array<{ index: string; title: string }> = [
   display: flex;
   .menu {
     width: 160px;
-    background-color: var(--el-color-primary-light-9);
+    background-color: var(--el-color-primary-light-3);
+    .el-menu-item {
+      color: #ffffff;
+      &.is-active {
+        background: var(--el-color-primary-dark-2) !important;
+      }
+      &:hover {
+        background: var(--el-color-primary) !important;
+      }
+    }
   }
   .content {
     flex: 1;
