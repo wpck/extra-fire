@@ -2,7 +2,11 @@
   <div class="content">
     <div class="data">
       <div v-for="item in list" class="data-item">
-        <div class="item">【{{ type === 2 ? '消防资讯' : '事故报告' }}】{{ item.title }}</div>
+        <div class="item">
+          <span>{{ item.title }}</span>
+          <span class="ml-2">{{ item.no }}</span>
+          <span class="ml-2">{{ item.year }}</span>
+        </div>
       </div>
     </div>
     <el-pagination
@@ -36,8 +40,8 @@ const handleCurrentChange = () => {}
 <style lang="scss" scoped>
 .content {
   flex: 1;
-  // padding: 0 $content-padding $content-padding;
-  width: 80%;
+  width: 100%;
+  padding: 0 $content-padding;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -52,7 +56,7 @@ const handleCurrentChange = () => {}
     }
   }
   .page {
-    padding-bottom: 20px;
+    padding-bottom: $content-padding;
   }
 }
 </style>

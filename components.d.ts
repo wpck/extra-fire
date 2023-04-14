@@ -22,6 +22,8 @@ declare module '@vue/runtime-core' {
     IndexList: typeof import('./src/components/IndexList.vue')['default']
     ItemTitle: typeof import('./src/components/ItemTitle.vue')['default']
     LabelTree: typeof import('./src/components/LabelTree.vue')['default']
+    MulList: typeof import('./src/components/MulList.vue')['default']
+    MulSearch: typeof import('./src/components/MulSearch.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInp: typeof import('./src/components/SearchInp.vue')['default']

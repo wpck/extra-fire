@@ -87,7 +87,7 @@ const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
   padding: 0 $content-padding;
   .side {
     width: 160px;
-    margin-left: 20px;
+    margin-left: 36px;
     line-height: 32px;
     .hot-title {
       font-weight: 600;
