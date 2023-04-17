@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     copy: typeof import('./src/components/DataList copy.vue')['default']
     DataList: typeof import('./src/components/DataList.vue')['default']
+    Detail: typeof import('./src/components/Detail.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElInput: typeof import('element-plus/es')['ElInput']
@@ -24,6 +25,7 @@ declare module '@vue/runtime-core' {
     LabelTree: typeof import('./src/components/LabelTree.vue')['default']
     MulList: typeof import('./src/components/MulList.vue')['default']
     MulSearch: typeof import('./src/components/MulSearch.vue')['default']
+    PreviewDetail: typeof import('./src/components/PreviewDetail.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInp: typeof import('./src/components/SearchInp.vue')['default']
