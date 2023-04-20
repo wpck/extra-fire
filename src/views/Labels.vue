@@ -1,16 +1,16 @@
 <!-- 标签体系页面 -->
 <template>
-  <div class="flex p-4">
-    <div class="tree-item">
-      <div class="tree-title">火灾事故</div>
+  <div class="flex p-4 tree">
+    <div class="tree-item con-wrap">
+      <h3>火灾事故</h3>
       <LabelTree :data="dataSource" />
     </div>
-    <div class="tree-item">
-      <div class="tree-title">标准资讯</div>
+    <div class="tree-item con-wrap">
+      <h3>标准资讯</h3>
       <LabelTree :data="dataSource" />
     </div>
-    <div class="tree-item">
-      <div class="tree-title">预案</div>
+    <div class="tree-item con-wrap">
+      <h3>预案</h3>
       <LabelTree :data="dataSource" @handle="handleLabel" />
     </div>
   </div>
@@ -103,17 +103,20 @@ const dataSource = ref<Tree[]>([
 ])
 </script>
 <style lang="scss" scoped>
-.tree-item {
-  flex: 1;
-  margin-left: 86px;
-  &:nth-child(1) {
-    margin-left: 0;
-  }
-  .tree-title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 12px;
+.tree {
+  height: 100%;
+  &-item {
+    flex: 1;
+    margin-left: 16px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    .tree-title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 }
 </style>

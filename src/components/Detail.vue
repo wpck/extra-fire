@@ -1,6 +1,6 @@
 <template>
-  <div class="wrap">
-    <div class="title">{{ data.title }}</div>
+  <div class="wrap con-wrap">
+    <h3>{{ data.title }}</h3>
     <div class="content">{{ data.content }}</div>
   </div>
 </template>
@@ -15,15 +15,8 @@ const props = defineProps<{
 .wrap {
   width: 80%;
   height: calc(100% - 40px);
-  background-color: var(--el-color-primary-light-9);
   margin: 20px auto;
   text-align: center;
-  border-radius: 6px;
-  padding: 0 10px;
-  .title {
-    line-height: 50px;
-    font-weight: 600;
-  }
   .content {
     text-indent: 2em;
     height: calc(100% - 50px);

@@ -30,7 +30,7 @@ const menuList: Array<{ index: string; title: string }> = [
 
 <style lang="scss" scoped>
 .top {
-  background-color: var(--el-color-primary);
+  background-color: $color-bg;
   color: var(--el-color-white);
   height: 64px;
   line-height: 64px;
@@ -43,14 +43,14 @@ const menuList: Array<{ index: string; title: string }> = [
   display: flex;
   .menu {
     width: 160px;
-    background-color: var(--el-color-primary-light-3);
+    background-color: $color-bg;
     .el-menu-item {
       color: #ffffff;
       &.is-active {
-        background: var(--el-color-primary-dark-2) !important;
+        background: $color-active !important;
       }
       &:hover {
-        background: var(--el-color-primary) !important;
+        background: $color-active !important;
       }
     }
   }
@@ -58,6 +58,9 @@ const menuList: Array<{ index: string; title: string }> = [
     flex: 1;
     display: flex;
     flex-direction: column;
+    background: $color-main;
+    height: 100%;
+    overflow: auto;
   }
 }
 </style>

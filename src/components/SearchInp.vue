@@ -18,6 +18,6 @@ const searchKey = ref<string>('')
 <style lang="scss" scoped>
 .search {
   width: 80%;
-  margin: 20px auto;
+  margin: 16px auto;
 }
 </style>

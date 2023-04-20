@@ -13,7 +13,7 @@
       <IndexList :list="list" />
 
       <!-- 热词区 -->
-      <div class="side">
+      <div class="side con-wrap">
         <div class="hot-title">热词</div>
         <div v-for="(item, index) in hotWord" class="hot-word">
           <span class="mr-2">{{ index + 1 }}</span>
@@ -67,12 +67,13 @@ const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
 .top {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid $color-border;
   &-item {
     flex: 1;
-    background: var(--el-color-primary-light-9);
+    background: $color-content;
     text-align: center;
     padding: 20px 0;
-    border-left: 1px solid var(--el-color-primary-dark-2);
+    border-left: 1px solid $color-border;
     &:nth-of-type(1) {
       border-left: none;
     }
@@ -85,9 +86,10 @@ const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
 .main {
   display: flex;
   padding: 0 $content-padding;
+  height: calc(100% - 80px);
   .side {
     width: 160px;
-    margin-left: 36px;
+    margin-left: 16px;
     line-height: 32px;
     .hot-title {
       font-weight: 600;

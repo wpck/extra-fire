@@ -1,5 +1,5 @@
 <template>
-  <div class="title">【{{ data.type }}】{{ data.title }}</div>
+  <h3 class="cursor-pointer">【{{ data.type }}】{{ data.title }}</h3>
   <div class="desc">{{ data.desc }}</div>
 </template>
 

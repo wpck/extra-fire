@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="data">
+    <div class="data con-wrap">
       <div v-for="item in list" class="data-item">
         <div class="item">
           <span>{{ item.title }}</span>
@@ -56,7 +56,7 @@ const handleCurrentChange = () => {}
     }
   }
   .page {
-    padding-bottom: $content-padding;
+    padding: 16px 0;
   }
 }
 </style>
