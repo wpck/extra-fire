@@ -27,6 +27,8 @@
 import { ref } from 'vue'
 import IndexList from '@/components/IndexList.vue'
 import SearchInp from '@/components/SearchInp.vue'
+import { getRecommendList } from '@/api/datalist'
+import { onMounted } from 'vue'
 
 const moduleList = [
   { label: '事故报告', key: 'malfunction' },
@@ -59,6 +61,13 @@ const list = ref<any[]>([
     desc: '描述喵帕斯积分兑换犯得上广泛死一个没覅士大夫大师傅对于萨格费用买房贷款首付湖底撒发给有多少个i都市风光摄影的公司法规定使用风格有点u发的啥抚养大司法改革的萨芬归功于i点十四公分压缩的法国英国读书呀给研发',
   },
 ])
+
+onMounted(() => {
+  getRecommendList().then(res => {
+    console.log(res)
+    list.value = res.data || []
+  })
+})
 
 const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
 </script>

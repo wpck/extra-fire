@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
 import 'element-plus/dist/index.css'
-// import 'element-plus/theme-chalk/src/common/var.scss'
 import './style.css'
-// import '@/assets/global.scss'
 import App from './App.vue'
 import router from './router'
+import './api/mock.ts'
 
 const app = createApp(App)
 app.use(router)
