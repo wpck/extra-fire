@@ -23,5 +23,7 @@ const toDetail = () => {
 <style lang="scss" scoped>
 .content {
   flex: 1;
+  min-width: 0;
+  overflow: auto;
 }
 </style>

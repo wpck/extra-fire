@@ -17,7 +17,7 @@ const props = defineProps<{
 }
 
 .desc {
-  height: 48px;
+  max-height: 48px;
   text-indent: 2em;
   line-height: 24px;
   word-break: break-all;

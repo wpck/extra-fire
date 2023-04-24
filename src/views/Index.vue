@@ -1,12 +1,12 @@
 <template>
   <!-- 顶部统计数据 -->
   <div class="top">
-    <div v-for="item in moduleList" class="top-item">{{ item.label }} {{ moduleData[item.key] }}篇</div>
+    <div v-for="item in moduleList" class="top-item">{{ item.label }} {{ statistics[item.key] }} 篇</div>
   </div>
 
   <div class="bottom">
     <!-- 搜索区域 -->
-    <SearchInp />
+    <SearchInp @handleSearch="handleSearch" />
 
     <div class="main">
       <!-- 列表展示区域 -->
@@ -27,7 +27,7 @@
 import { ref } from 'vue'
 import IndexList from '@/components/IndexList.vue'
 import SearchInp from '@/components/SearchInp.vue'
-import { getRecommendList } from '@/api/datalist'
+import { getStatisticsNum, getRecommendList } from '@/api'
 import { onMounted } from 'vue'
 
 const moduleList = [
@@ -37,32 +37,14 @@ const moduleList = [
   { label: '消防资讯', key: 'information' },
 ]
 
-const moduleData: any = {
-  malfunction: 300,
-  standard: 200,
-  reserve: 100,
-  information: 360,
-}
+const statistics = ref<any>({ malfunction: 300, standard: 200, reserve: 100, information: 360 })
 
-const list = ref<any[]>([
-  {
-    type: '事故报告',
-    title: '2022北京市东城区景山街道哈哈哈哈哈哈啥事故报告',
-    desc: '描述喵帕斯积分兑换犯得上广泛死一个没覅士大夫大师傅对于萨格费用买房贷款首付湖底撒发给有多少个i都市风光摄影的公司法规定使用风格有点u发的啥抚养大司法改革的萨芬归功于i点十四公分压缩的法国英国读书呀给研发',
-  },
-  {
-    type: '事故报告',
-    title: '2022北京市东城区景山街道哈哈哈哈哈哈啥事故报告',
-    desc: '描述喵帕斯积分兑换犯得上广泛死一个没覅士大夫大师傅对于萨格费用买房贷款首付湖底撒发给有多少个i都市风光摄影的公司法规定使用风格有点u发的啥抚养大司法改革的萨芬归功于i点十四公分压缩的法国英国读书呀给研发',
-  },
-  {
-    type: '事故报告',
-    title: '2022北京市东城区景山街道哈哈哈哈哈哈啥事故报告',
-    desc: '描述喵帕斯积分兑换犯得上广泛死一个没覅士大夫大师傅对于萨格费用买房贷款首付湖底撒发给有多少个i都市风光摄影的公司法规定使用风格有点u发的啥抚养大司法改革的萨芬归功于i点十四公分压缩的法国英国读书呀给研发',
-  },
-])
+const list = ref<any[]>([])
 
 onMounted(() => {
+  getStatisticsNum().then(res => {
+    statistics.value = res.data || {}
+  })
   getRecommendList().then(res => {
     console.log(res)
     list.value = res.data || []
@@ -70,6 +52,11 @@ onMounted(() => {
 })
 
 const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
+
+// 执行搜索
+function handleSearch(key: string) {
+  console.log(key)
+}
 </script>
 
 <style scoped lang="scss">
