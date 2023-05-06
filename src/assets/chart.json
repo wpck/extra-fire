@@ -2,562 +2,379 @@
     "nodes": [
         {
             "id": "0",
-            "name": "m1",
-            "symbolSize": 10,
+            "name": "你-0",
+            "symbolSize": 60,
             "value": 28.685715,
             "category": 0
         },
         {
-            "id": "1",
-            "name": "m2",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
-        },
-        {
-            "id": "2",
-            "name": "m3",
-            "symbolSize": 10,
-            "value": 9.485714,
-            "category": 1
-        },
-        {
             "id": "3",
-            "name": "m4",
-            "symbolSize": 10,
-            "value": 9.485714,
-            "category": 1
-        },
-        {
-            "id": "4",
-            "name": "m5",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
+            "name": "谁-0",
+            "symbolSize": 60,
+            "value": 24,
+            "category": 3
         },
         {
             "id": "5",
-            "name": "m6",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
-        },
-        {
-            "id": "6",
-            "name": "m7",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
-        },
-        {
-            "id": "7",
-            "name": "m8",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
-        },
-        {
-            "id": "8",
-            "name": "m9",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
-        },
-        {
-            "id": "9",
-            "name": "m10",
-            "symbolSize": 10,
-            "value": 4,
-            "category": 0
+            "name": "重大-0",
+            "symbolSize": 60,
+            "value": 24,
+            "category": 5
         },
         {
             "id": "10",
-            "name": "m11",
-            "symbolSize": 10,
-            "value": 4,
+            "name": "我-0",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "11",
-            "name": "m12",
-            "symbolSize": 20,
-            "value": 100,
+            "name": "我-1",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "12",
-            "name": "m1_2",
-            "symbolSize": 10,
+            "name": "我-2",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "13",
-            "name": "m13",
-            "symbolSize": 10,
-            "value": 4,
+            "name": "我-3",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "14",
-            "name": "m14",
-            "symbolSize": 10,
-            "value": 4,
+            "name": "我-4",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "15",
-            "name": "m15",
-            "symbolSize": 10,
-            "value": 4,
+            "name": "我-5",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 1
         },
         {
             "id": "16",
-            "name": "m16",
-            "symbolSize": 10,
-            "value": 25.942856,
-            "category": 2
+            "name": "我-6",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 1
         },
         {
             "id": "17",
-            "name": "m17",
-            "symbolSize": 10,
-            "value": 20.457146,
-            "category": 2
+            "name": "我-7",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 1
         },
         {
             "id": "18",
-            "name": "m18",
-            "symbolSize": 10,
-            "value": 20.457146,
-            "category": 2
+            "name": "我-8",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 1
         },
         {
             "id": "19",
-            "name": "m19",
-            "symbolSize": 10,
-            "value": 20.457146,
-            "category": 2
+            "name": "我-9",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 1
         },
         {
             "id": "20",
-            "name": "m20",
-            "symbolSize": 10,
-            "value": 20.457146,
+            "name": "他-0",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 2
         },
         {
             "id": "21",
-            "name": "m21",
-            "symbolSize": 10,
-            "value": 20.457146,
+            "name": "他-1",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 2
         },
         {
             "id": "22",
-            "name": "m22",
-            "symbolSize": 10,
-            "value": 20.457146,
+            "name": "他-2",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 2
         },
         {
             "id": "23",
-            "name": "m23",
-            "symbolSize": 8,
-            "value": 42.4,
+            "name": "他-3",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 2
         },
         {
             "id": "24",
-            "name": "m24",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 7
+            "name": "他-4",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 2
         },
         {
             "id": "25",
-            "name": "m25",
-            "symbolSize": 8,
-            "value": 45.142853,
-            "category": 7
+            "name": "他-5",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 2
         },
         {
             "id": "26",
-            "name": "m26",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 6
+            "name": "他-6",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 2
         },
         {
             "id": "27",
-            "name": "m27",
-            "symbolSize": 25,
-            "value": 47.88571,
-            "category": 7
+            "name": "他-7",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 2
         },
         {
             "id": "28",
-            "name": "m28",
-            "symbolSize": 8,
-            "value": 12.228573,
-            "category": 4
+            "name": "他-8",
+            "symbolSize": 40,
+            "value": 28.685715,
+            "category": 2
         },
         {
             "id": "29",
-            "name": "m29",
-            "symbolSize": 8,
-            "value": 23.2,
-            "category": 3
-        },
-        {
-            "id": "30",
-            "name": "m30",
-            "symbolSize": 8,
-            "value": 6.742859,
+            "name": "他-9",
+            "symbolSize": 40,
+            "value": 28.685715,
             "category": 2
-        },
-        {
-            "id": "31",
-            "name": "m31",
-            "symbolSize": 8,
-            "value": 12.228573,
-            "category": 2
-        },
-        {
-            "id": "32",
-            "name": "m32",
-            "symbolSize": 8,
-            "value": 4,
-            "category": 1
-        },
-        {
-            "id": "33",
-            "name": "m33",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 1
-        },
-        {
-            "id": "34",
-            "name": "m34",
-            "symbolSize": 8,
-            "value": 17.714287,
-            "category": 3
-        },
-        {
-            "id": "35",
-            "name": "m35",
-            "symbolSize": 8,
-            "value": 17.714287,
-            "category": 3
-        },
-        {
-            "id": "36",
-            "name": "m36",
-            "symbolSize": 8,
-            "value": 17.714287,
-            "category": 3
-        },
-        {
-            "id": "37",
-            "name": "m37",
-            "symbolSize": 8,
-            "value": 17.714287,
-            "category": 3
-        },
-        {
-            "id": "38",
-            "name": "m38",
-            "symbolSize": 8,
-            "value": 17.714287,
-            "category": 3
-        },
-        {
-            "id": "39",
-            "name": "m39",
-            "symbolSize": 8,
-            "value": 9.485714,
-            "category": 6
         },
         {
             "id": "40",
-            "name": "m40",
-            "symbolSize": 8,
-            "value": 4,
-            "category": 7
+            "name": "好-0",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "41",
-            "name": "m41",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 7
+            "name": "好-1",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "42",
-            "name": "m42",
-            "symbolSize": 8,
-            "value": 9.485714,
-            "category": 7
+            "name": "好-2",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "43",
-            "name": "m43",
-            "symbolSize": 8,
-            "value": 9.485714,
-            "category": 6
+            "name": "好-3",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "44",
-            "name": "m44",
-            "symbolSize": 8,
-            "value": 6.742859,
+            "name": "好-4",
+            "symbolSize": 40,
+            "value": 24,
             "category": 4
         },
         {
             "id": "45",
-            "name": "m45",
-            "symbolSize": 8,
-            "value": 4,
+            "name": "好-5",
+            "symbolSize": 40,
+            "value": 24,
             "category": 4
         },
         {
             "id": "46",
-            "name": "m46",
-            "symbolSize": 8,
-            "value": 4,
-            "category": 5
+            "name": "好-6",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "47",
-            "name": "m47",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 5
+            "name": "好-7",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "48",
-            "name": "m48",
-            "symbolSize": 8,
-            "value": 61.600006,
-            "category": 8
+            "name": "好-8",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "49",
-            "name": "m49",
-            "symbolSize": 8,
-            "value": 20.457146,
-            "category": 6
-        },
-        {
-            "id": "50",
-            "name": "m50",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 6
-        },
-        {
-            "id": "51",
-            "name": "m51",
-            "symbolSize": 8,
-            "value": 20.457146,
-            "category": 6
-        },
-        {
-            "id": "52",
-            "name": "m52",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 6
-        },
-        {
-            "id": "53",
-            "name": "m53",
-            "symbolSize": 8,
-            "value": 4,
-            "category": 6
-        },
-        {
-            "id": "54",
-            "name": "m54",
-            "symbolSize": 8,
-            "value": 12.228573,
-            "category": 6
-        },
-        {
-            "id": "55",
-            "name": "m55",
-            "symbolSize": 8,
-            "value": 53.37143,
-            "category": 6
-        },
-        {
-            "id": "56",
-            "name": "m56",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 6
-        },
-        {
-            "id": "57",
-            "name": "m57",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 8
-        },
-        {
-            "id": "58",
-            "name": "m58",
-            "symbolSize": 8,
-            "value": 42.4,
-            "category": 8
-        },
-        {
-            "id": "59",
-            "name": "m59",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 8
+            "name": "好-9",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 4
         },
         {
             "id": "60",
-            "name": "m60",
-            "symbolSize": 8,
-            "value": 25.942856,
-            "category": 8
+            "name": "非常-0",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "61",
-            "name": "m61",
-            "symbolSize": 8,
-            "value": 31.428574,
-            "category": 8
+            "name": "非常-1",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "62",
-            "name": "m62",
-            "symbolSize": 8,
-            "value": 36.91429,
-            "category": 8
+            "name": "非常-2",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "63",
-            "name": "m63",
-            "symbolSize": 8,
-            "value": 34.17143,
-            "category": 8
+            "name": "非常-3",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "64",
-            "name": "m64",
-            "symbolSize": 8,
-            "value": 36.91429,
-            "category": 8
+            "name": "非常-4",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "65",
-            "name": "m65",
-            "symbolSize": 8,
-            "value": 34.17143,
-            "category": 8
+            "name": "非常5",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "66",
-            "name": "m66",
-            "symbolSize": 8,
-            "value": 28.685715,
-            "category": 8
+            "name": "非常6",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "67",
-            "name": "m67",
-            "symbolSize": 8,
-            "value": 4,
-            "category": 8
+            "name": "非常7",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "68",
-            "name": "m68",
-            "symbolSize": 18,
-            "value": 28.685715,
-            "category": 7
+            "name": "非常8",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "69",
-            "name": "m69",
-            "symbolSize": 16,
-            "value": 28.685715,
-            "category": 7
+            "name": "非常9",
+            "symbolSize": 60,
+            "value": 24,
+            "category": 6
         },
         {
             "id": "70",
-            "name": "m70",
-            "symbolSize": 8,
-            "value": 28.685715,
+            "name": "橘子0",
+            "symbolSize": 40,
+            "value": 24,
             "category": 7
         },
         {
             "id": "71",
-            "name": "m71",
-            "symbolSize": 8,
-            "value": 25.942856,
+            "name": "橘子1",
+            "symbolSize": 40,
+            "value": 24,
             "category": 7
         },
         {
             "id": "72",
-            "name": "m72",
-            "symbolSize": 8,
-            "value": 9.485714,
-            "category": 1
+            "name": "橘子2",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
         },
         {
             "id": "73",
-            "name": "m73",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 8
+            "name": "橘子3",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
         },
         {
             "id": "74",
-            "name": "m74",
-            "symbolSize": 8,
-            "value": 6.742859,
-            "category": 8
+            "name": "橘子4",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
         },
         {
             "id": "75",
-            "name": "m75",
-            "symbolSize": 8,
-            "value": 20.457146,
+            "name": "橘子5",
+            "symbolSize": 40,
+            "value": 24,
             "category": 7
         },
         {
             "id": "76",
-            "name": "m76",
-            "symbolSize": 8,
-            "value": 20.457146,
-            "category": 8
+            "name": "橘子6",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
+        },
+        {
+            "id": "77",
+            "name": "橘子7",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
+        },
+        {
+            "id": "78",
+            "name": "橘子8",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
+        },
+        {
+            "id": "79",
+            "name": "橘子9",
+            "symbolSize": 40,
+            "value": 24,
+            "category": 7
         }
     ],
     "links": [
         {
-            "source": "1",
-            "target": "0"
-        },
-        {
-            "source": "2",
-            "target": "0"
-        },
-        {
             "source": "3",
-            "target": "0"
-        },
-        {
-            "source": "3",
-            "target": "2"
-        },
-        {
-            "source": "4",
             "target": "0"
         },
         {
@@ -565,864 +382,168 @@
             "target": "0"
         },
         {
-            "source": "6",
-            "target": "0"
-        },
-        {
-            "source": "7",
-            "target": "0"
-        },
-        {
-            "source": "8",
-            "target": "0"
-        },
-        {
-            "source": "9",
-            "target": "0"
-        },
-        {
-            "source": "11",
-            "target": "0"
-        },
-        {
-            "source": "11",
-            "target": "2"
-        },
-        {
-            "source": "11",
+            "source": "5",
             "target": "3"
         },
         {
+            "source": "10",
+            "target": "0"
+        },
+        {
             "source": "11",
-            "target": "12"
+            "target": "0"
         },
         {
             "source": "12",
-            "target": "11"
+            "target": "0"
         },
         {
             "source": "13",
-            "target": "11"
+            "target": "0"
         },
         {
             "source": "14",
-            "target": "11"
+            "target": "0"
         },
         {
             "source": "15",
-            "target": "11"
+            "target": "0"
+        },
+        {
+            "source": "16",
+            "target": "0"
         },
         {
             "source": "17",
-            "target": "16"
+            "target": "0"
         },
         {
             "source": "18",
-            "target": "16"
-        },
-        {
-            "source": "18",
-            "target": "17"
+            "target": "0"
         },
         {
             "source": "19",
-            "target": "16"
-        },
-        {
-            "source": "19",
-            "target": "17"
-        },
-        {
-            "source": "19",
-            "target": "18"
+            "target": "0"
         },
         {
             "source": "20",
-            "target": "16"
-        },
-        {
-            "source": "20",
-            "target": "17"
-        },
-        {
-            "source": "20",
-            "target": "18"
-        },
-        {
-            "source": "20",
-            "target": "19"
+            "target": "0"
         },
         {
             "source": "21",
-            "target": "16"
-        },
-        {
-            "source": "21",
-            "target": "17"
-        },
-        {
-            "source": "21",
-            "target": "18"
-        },
-        {
-            "source": "21",
-            "target": "19"
-        },
-        {
-            "source": "21",
-            "target": "20"
+            "target": "0"
         },
         {
             "source": "22",
-            "target": "16"
-        },
-        {
-            "source": "22",
-            "target": "17"
-        },
-        {
-            "source": "22",
-            "target": "18"
-        },
-        {
-            "source": "22",
-            "target": "19"
-        },
-        {
-            "source": "22",
-            "target": "20"
-        },
-        {
-            "source": "22",
-            "target": "21"
+            "target": "0"
         },
         {
             "source": "23",
-            "target": "11"
-        },
-        {
-            "source": "23",
-            "target": "12"
-        },
-        {
-            "source": "23",
-            "target": "16"
-        },
-        {
-            "source": "23",
-            "target": "17"
-        },
-        {
-            "source": "23",
-            "target": "18"
-        },
-        {
-            "source": "23",
-            "target": "19"
-        },
-        {
-            "source": "23",
-            "target": "20"
-        },
-        {
-            "source": "23",
-            "target": "21"
-        },
-        {
-            "source": "23",
-            "target": "22"
+            "target": "0"
         },
         {
             "source": "24",
-            "target": "11"
-        },
-        {
-            "source": "24",
-            "target": "23"
+            "target": "0"
         },
         {
             "source": "25",
-            "target": "11"
-        },
-        {
-            "source": "25",
-            "target": "23"
-        },
-        {
-            "source": "25",
-            "target": "24"
+            "target": "0"
         },
         {
             "source": "26",
-            "target": "11"
-        },
-        {
-            "source": "26",
-            "target": "16"
-        },
-        {
-            "source": "26",
-            "target": "24"
-        },
-        {
-            "source": "26",
-            "target": "25"
+            "target": "0"
         },
         {
             "source": "27",
-            "target": "11"
-        },
-        {
-            "source": "27",
-            "target": "23"
-        },
-        {
-            "source": "27",
-            "target": "24"
-        },
-        {
-            "source": "27",
-            "target": "25"
-        },
-        {
-            "source": "27",
-            "target": "26"
+            "target": "0"
         },
         {
             "source": "28",
-            "target": "11"
-        },
-        {
-            "source": "28",
-            "target": "27"
+            "target": "0"
         },
         {
             "source": "29",
-            "target": "11"
-        },
-        {
-            "source": "29",
-            "target": "23"
-        },
-        {
-            "source": "29",
-            "target": "27"
-        },
-        {
-            "source": "30",
-            "target": "23"
-        },
-        {
-            "source": "31",
-            "target": "11"
-        },
-        {
-            "source": "31",
-            "target": "23"
-        },
-        {
-            "source": "31",
-            "target": "27"
-        },
-        {
-            "source": "31",
-            "target": "30"
-        },
-        {
-            "source": "32",
-            "target": "11"
-        },
-        {
-            "source": "33",
-            "target": "11"
-        },
-        {
-            "source": "33",
-            "target": "27"
-        },
-        {
-            "source": "34",
-            "target": "11"
-        },
-        {
-            "source": "34",
-            "target": "29"
-        },
-        {
-            "source": "35",
-            "target": "11"
-        },
-        {
-            "source": "35",
-            "target": "29"
-        },
-        {
-            "source": "35",
-            "target": "34"
-        },
-        {
-            "source": "36",
-            "target": "11"
-        },
-        {
-            "source": "36",
-            "target": "29"
-        },
-        {
-            "source": "36",
-            "target": "34"
-        },
-        {
-            "source": "36",
-            "target": "35"
-        },
-        {
-            "source": "37",
-            "target": "11"
-        },
-        {
-            "source": "37",
-            "target": "29"
-        },
-        {
-            "source": "37",
-            "target": "34"
-        },
-        {
-            "source": "37",
-            "target": "35"
-        },
-        {
-            "source": "37",
-            "target": "36"
-        },
-        {
-            "source": "38",
-            "target": "11"
-        },
-        {
-            "source": "38",
-            "target": "29"
-        },
-        {
-            "source": "38",
-            "target": "34"
-        },
-        {
-            "source": "38",
-            "target": "35"
-        },
-        {
-            "source": "38",
-            "target": "36"
-        },
-        {
-            "source": "38",
-            "target": "37"
-        },
-        {
-            "source": "39",
-            "target": "25"
+            "target": "0"
         },
         {
             "source": "40",
-            "target": "25"
+            "target": "3"
         },
         {
             "source": "41",
-            "target": "24"
-        },
-        {
-            "source": "41",
-            "target": "25"
+            "target": "3"
         },
         {
             "source": "42",
-            "target": "24"
-        },
-        {
-            "source": "42",
-            "target": "25"
-        },
-        {
-            "source": "42",
-            "target": "41"
+            "target": "3"
         },
         {
             "source": "43",
-            "target": "11"
-        },
-        {
-            "source": "43",
-            "target": "26"
-        },
-        {
-            "source": "43",
-            "target": "27"
+            "target": "3"
         },
         {
             "source": "44",
-            "target": "11"
-        },
-        {
-            "source": "44",
-            "target": "28"
+            "target": "3"
         },
         {
             "source": "45",
-            "target": "28"
+            "target": "3"
+        },
+        {
+            "source": "46",
+            "target": "3"
         },
         {
             "source": "47",
-            "target": "46"
+            "target": "3"
         },
         {
             "source": "48",
-            "target": "11"
-        },
-        {
-            "source": "48",
-            "target": "25"
-        },
-        {
-            "source": "48",
-            "target": "27"
-        },
-        {
-            "source": "48",
-            "target": "47"
+            "target": "3"
         },
         {
             "source": "49",
-            "target": "11"
-        },
-        {
-            "source": "49",
-            "target": "26"
-        },
-        {
-            "source": "50",
-            "target": "24"
-        },
-        {
-            "source": "50",
-            "target": "49"
-        },
-        {
-            "source": "51",
-            "target": "11"
-        },
-        {
-            "source": "51",
-            "target": "26"
-        },
-        {
-            "source": "51",
-            "target": "49"
-        },
-        {
-            "source": "52",
-            "target": "39"
-        },
-        {
-            "source": "52",
-            "target": "51"
-        },
-        {
-            "source": "53",
-            "target": "51"
-        },
-        {
-            "source": "54",
-            "target": "26"
-        },
-        {
-            "source": "54",
-            "target": "49"
-        },
-        {
-            "source": "54",
-            "target": "51"
-        },
-        {
-            "source": "55",
-            "target": "11"
-        },
-        {
-            "source": "55",
-            "target": "16"
-        },
-        {
-            "source": "55",
-            "target": "25"
-        },
-        {
-            "source": "55",
-            "target": "26"
-        },
-        {
-            "source": "55",
-            "target": "39"
-        },
-        {
-            "source": "55",
-            "target": "41"
-        },
-        {
-            "source": "55",
-            "target": "48"
-        },
-        {
-            "source": "55",
-            "target": "49"
-        },
-        {
-            "source": "55",
-            "target": "51"
-        },
-        {
-            "source": "55",
-            "target": "54"
-        },
-        {
-            "source": "56",
-            "target": "49"
-        },
-        {
-            "source": "56",
-            "target": "55"
-        },
-        {
-            "source": "57",
-            "target": "41"
-        },
-        {
-            "source": "57",
-            "target": "48"
-        },
-        {
-            "source": "57",
-            "target": "55"
-        },
-        {
-            "source": "58",
-            "target": "11"
-        },
-        {
-            "source": "58",
-            "target": "27"
-        },
-        {
-            "source": "58",
-            "target": "48"
-        },
-        {
-            "source": "58",
-            "target": "55"
-        },
-        {
-            "source": "58",
-            "target": "57"
-        },
-        {
-            "source": "59",
-            "target": "48"
-        },
-        {
-            "source": "59",
-            "target": "55"
-        },
-        {
-            "source": "59",
-            "target": "57"
-        },
-        {
-            "source": "59",
-            "target": "58"
+            "target": "3"
         },
         {
             "source": "60",
-            "target": "48"
-        },
-        {
-            "source": "60",
-            "target": "58"
-        },
-        {
-            "source": "60",
-            "target": "59"
+            "target": "0"
         },
         {
             "source": "61",
-            "target": "48"
-        },
-        {
-            "source": "61",
-            "target": "55"
-        },
-        {
-            "source": "61",
-            "target": "57"
-        },
-        {
-            "source": "61",
-            "target": "58"
-        },
-        {
-            "source": "61",
-            "target": "59"
-        },
-        {
-            "source": "61",
-            "target": "60"
+            "target": "0"
         },
         {
             "source": "62",
-            "target": "41"
-        },
-        {
-            "source": "62",
-            "target": "48"
-        },
-        {
-            "source": "62",
-            "target": "55"
-        },
-        {
-            "source": "62",
-            "target": "57"
-        },
-        {
-            "source": "62",
-            "target": "58"
-        },
-        {
-            "source": "62",
-            "target": "59"
-        },
-        {
-            "source": "62",
-            "target": "60"
-        },
-        {
-            "source": "62",
-            "target": "61"
+            "target": "0"
         },
         {
             "source": "63",
-            "target": "48"
-        },
-        {
-            "source": "63",
-            "target": "55"
-        },
-        {
-            "source": "63",
-            "target": "57"
-        },
-        {
-            "source": "63",
-            "target": "58"
-        },
-        {
-            "source": "63",
-            "target": "59"
-        },
-        {
-            "source": "63",
-            "target": "60"
-        },
-        {
-            "source": "63",
-            "target": "61"
-        },
-        {
-            "source": "63",
-            "target": "62"
+            "target": "0"
         },
         {
             "source": "64",
-            "target": "11"
-        },
-        {
-            "source": "64",
-            "target": "48"
-        },
-        {
-            "source": "64",
-            "target": "55"
-        },
-        {
-            "source": "64",
-            "target": "57"
-        },
-        {
-            "source": "64",
-            "target": "58"
-        },
-        {
-            "source": "64",
-            "target": "59"
-        },
-        {
-            "source": "64",
-            "target": "60"
-        },
-        {
-            "source": "64",
-            "target": "61"
-        },
-        {
-            "source": "64",
-            "target": "62"
-        },
-        {
-            "source": "64",
-            "target": "63"
+            "target": "0"
         },
         {
             "source": "65",
-            "target": "48"
-        },
-        {
-            "source": "65",
-            "target": "55"
-        },
-        {
-            "source": "65",
-            "target": "57"
-        },
-        {
-            "source": "65",
-            "target": "58"
-        },
-        {
-            "source": "65",
-            "target": "59"
-        },
-        {
-            "source": "65",
-            "target": "60"
-        },
-        {
-            "source": "65",
-            "target": "61"
-        },
-        {
-            "source": "65",
-            "target": "62"
+            "target": "0"
         },
         {
             "source": "66",
-            "target": "59"
-        },
-        {
-            "source": "66",
-            "target": "60"
-        },
-        {
-            "source": "66",
-            "target": "61"
-        },
-        {
-            "source": "66",
-            "target": "62"
-        },
-        {
-            "source": "66",
-            "target": "63"
-        },
-        {
-            "source": "66",
-            "target": "64"
-        },
-        {
-            "source": "66",
-            "target": "65"
+            "target": "0"
         },
         {
             "source": "67",
-            "target": "57"
+            "target": "0"
         },
         {
             "source": "68",
-            "target": "27"
-        },
-        {
-            "source": "68",
-            "target": "24"
-        },
-        {
-            "source": "68",
-            "target": "25"
-        },
-        {
-            "source": "68",
-            "target": "27"
-        },
-        {
-            "source": "68",
-            "target": "41"
-        },
-        {
-            "source": "68",
-            "target": "48"
+            "target": "0"
         },
         {
             "source": "69",
-            "target": "27"
-        },
-        {
-            "source": "69",
-            "target": "24"
-        },
-        {
-            "source": "69",
-            "target": "25"
-        },
-        {
-            "source": "69",
-            "target": "27"
-        },
-        {
-            "source": "69",
-            "target": "41"
-        },
-        {
-            "source": "69",
-            "target": "48"
-        },
-        {
-            "source": "69",
-            "target": "68"
-        },
-        {
-            "source": "70",
-            "target": "27"
-        },
-        {
-            "source": "70",
-            "target": "24"
-        },
-        {
-            "source": "70",
-            "target": "25"
-        },
-        {
-            "source": "70",
-            "target": "27"
-        },
-        {
-            "source": "70",
-            "target": "41"
-        },
-        {
-            "source": "70",
-            "target": "58"
-        },
-        {
-            "source": "70",
-            "target": "68"
+            "target": "0"
         },
         {
             "source": "70",
@@ -1430,96 +551,65 @@
         },
         {
             "source": "71",
-            "target": "27"
-        },
-        {
-            "source": "71",
-            "target": "25"
-        },
-        {
-            "source": "71",
-            "target": "27"
-        },
-        {
-            "source": "71",
-            "target": "41"
-        },
-        {
-            "source": "71",
-            "target": "48"
-        },
-        {
-            "source": "71",
-            "target": "68"
-        },
-        {
-            "source": "71",
             "target": "69"
         },
         {
-            "source": "71",
-            "target": "70"
-        },
-        {
             "source": "72",
-            "target": "27"
-        },
-        {
-            "source": "72",
-            "target": "26"
-        },
-        {
-            "source": "72",
-            "target": "27"
+            "target": "69"
         },
         {
             "source": "73",
-            "target": "48"
+            "target": "69"
         },
         {
             "source": "74",
-            "target": "48"
-        },
-        {
-            "source": "74",
-            "target": "73"
+            "target": "69"
         },
         {
             "source": "75",
-            "target": "25"
+            "target": "69"
         },
         {
-            "source": "75",
-            "target": "41"
+            "source": "76",
+            "target": "69"
+        },
+        {
+            "source": "77",
+            "target": "69"
+        },
+        {
+            "source": "78",
+            "target": "69"
+        },
+        {
+            "source": "79",
+            "target": "69"
         }
     ],
     "categories": [
         {
-            "name": "A"
+            "name": "你"
         },
         {
-            "name": "B"
+            "name": "我"
         },
         {
-            "name": "C"
+            "name": "他"
         },
         {
-            "name": "D"
+            "name": "谁"
         },
         {
-            "name": "E"
+            "name": "好"
         },
         {
-            "name": "F"
+            "name": "重大"
         },
         {
-            "name": "G"
+            "name": "非常"
         },
         {
-            "name": "H"
-        },
-        {
-            "name": "I"
+            "name": "橘子"
         }
     ]
 }

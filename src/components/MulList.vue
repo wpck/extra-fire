@@ -53,6 +53,9 @@ const handleCurrentChange = () => {}
       line-height: 36px;
       font-size: 18px;
       font-weight: 600;
+      border-bottom: 1px dashed $color-border;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
     }
   }
   .page {

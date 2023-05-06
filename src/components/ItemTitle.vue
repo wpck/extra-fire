@@ -26,6 +26,5 @@ const props = defineProps<{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 这里是超出几行省略 */
   overflow: hidden;
-  margin-bottom: 20px;
 }
 </style>
