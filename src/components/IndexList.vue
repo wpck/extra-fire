@@ -1,3 +1,4 @@
+<!-- 首页列表组件 -->
 <template>
   <div class="content con-wrap">
     <div v-for="item in list" class="data-item" @click="toDetail">

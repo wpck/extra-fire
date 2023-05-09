@@ -1,3 +1,4 @@
+<!-- 详情页图谱组件 -->
 <template><div id="chart"></div></template>
 
 <script lang="ts" setup>

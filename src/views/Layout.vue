@@ -1,6 +1,6 @@
 <template>
   <!-- 顶部系统信息标题栏 -->
-  <div class="top">信息聚合平台</div>
+  <div class="top">火灾事故信息聚合平台</div>
 
   <div class="layout">
     <!-- 系统菜单 -->

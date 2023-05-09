@@ -1,3 +1,4 @@
+<!-- 普通报告通用详情页面 -->
 <template>
   <div class="wrap con-wrap">
     <h3>{{ data.title }}</h3>
