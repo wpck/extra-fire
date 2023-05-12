@@ -15,8 +15,6 @@ onMounted(() => {
 function initChart() {
   myChart = echarts.init(document.querySelector('#chart'))
 
-  console.log(graph)
-  console.log(option)
   myChart?.setOption(option)
 }
 

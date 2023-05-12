@@ -1,7 +1,13 @@
 <template>
   <!-- 顶部统计数据 -->
   <div class="top">
-    <div v-for="item in moduleList" class="top-item">{{ item.label }} {{ statistics[item.key] }} 篇</div>
+    <div v-for="item in moduleList" class="top-item">
+      <div class="left" :style="{ backgroundImage: `url('/imgs/${item.icon}.png')` }"></div>
+      <div class="right flex-1">
+        {{ item.label }}
+        <p>{{ statistics[item.key] }} 篇</p>
+      </div>
+    </div>
   </div>
 
   <div class="bottom">
@@ -31,10 +37,10 @@ import { getStatisticsNum, getRecommendList } from '@/api'
 import { onMounted } from 'vue'
 
 const moduleList = [
-  { label: '事故报告', key: 'malfunction' },
-  { label: '标准规范', key: 'standard' },
-  { label: '预案', key: 'reserve' },
-  { label: '消防资讯', key: 'information' },
+  { label: '事故报告', key: 'malfunction', icon: '2' },
+  { label: '标准规范', key: 'standard', icon: '1' },
+  { label: '预案', key: 'reserve', icon: '3' },
+  { label: '消防资讯', key: 'information', icon: '4' },
 ]
 
 const statistics = ref<any>({ malfunction: 300, standard: 200, reserve: 100, information: 360 })
@@ -64,14 +70,23 @@ function handleSearch(key: string) {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $color-border;
+  padding: 16px;
   &-item {
     flex: 1;
+    display: flex;
     background: $color-content;
-    text-align: center;
     padding: 20px 0;
-    border-left: 1px solid $color-border;
+    margin-left: 12px;
+    border-radius: 4px;
     &:nth-of-type(1) {
-      border-left: none;
+      margin-left: 0;
+    }
+    .left {
+      background-position: center center;
+      width: 48px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 12px;
     }
   }
 }
