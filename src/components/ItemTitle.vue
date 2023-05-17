@@ -16,9 +16,6 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.wrap:hover {
-  background-color: #f4f6f8;
-}
 .left {
   width: 160px;
   height: 110px;
@@ -33,12 +30,13 @@ const props = defineProps<{
 .right {
   flex: 1;
   min-width: 0;
+  position: relative;
   .title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    height: 56px;
-    margin-bottom: 8px;
+    max-height: 56px;
+    margin-bottom: 4px;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -48,9 +46,13 @@ const props = defineProps<{
   }
 
   .desc {
+    font-size: 14px;
     margin-bottom: 4px;
+    color: $color-font-ex;
   }
   .type {
+    position: absolute;
+    bottom: 0;
     font-size: 14px;
   }
 }

@@ -10,12 +10,9 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Carousel: typeof import('./src/components/Carousel.vue')['default']
-    copy: typeof import('./src/components/DataList copy.vue')['default']
     DataList: typeof import('./src/components/DataList.vue')['default']
     Detail: typeof import('./src/components/Detail.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElCarousel: typeof import('element-plus/es')['ElCarousel']
-    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ElDialog: typeof import('element-plus/es')['ElDialog']
@@ -30,9 +27,6 @@ declare module '@vue/runtime-core' {
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElTree: typeof import('element-plus/es')['ElTree']
     ElUpload: typeof import('element-plus/es')['ElUpload']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Image: typeof import('./src/components/Image.vue')['default']
-    ImageCarousel: typeof import('./src/components/ImageCarousel.vue')['default']
     IndexList: typeof import('./src/components/IndexList.vue')['default']
     ItemTitle: typeof import('./src/components/ItemTitle.vue')['default']
     LabelTree: typeof import('./src/components/LabelTree.vue')['default']
@@ -43,6 +37,5 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInp: typeof import('./src/components/SearchInp.vue')['default']
-    Title: typeof import('./src/components/Item Title.vue')['default']
   }
 }

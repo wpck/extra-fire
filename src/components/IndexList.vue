@@ -28,8 +28,10 @@ const toDetail = () => {
   overflow: auto;
   .data-item {
     border-bottom: 1px dashed $color-border;
-    padding-bottom: 12px;
-    margin-bottom: 16px;
+    padding: 24px;
+    &:hover {
+      background-color: #f4f6f8;
+    }
   }
 }
 </style>

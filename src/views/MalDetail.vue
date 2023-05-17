@@ -105,9 +105,11 @@ const nodeClick = a => {
 <style lang="scss" scoped>
 .detail {
   padding: 16px;
+  height: 100%;
 }
 .con {
   display: flex;
+  height: 50%;
   &-item {
     // min-width: 0;
     flex: 1;

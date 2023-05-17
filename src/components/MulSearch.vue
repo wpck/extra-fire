@@ -1,13 +1,18 @@
 <template>
   <div class="search">
-    <el-input v-for="(item, index) in searchType" v-model="item.value" placeholder="请输入" class="search-inp">
+    <div class="search-con  con-wrap">
+
+      <el-input v-for="(item, index) in searchType" v-model="item.value" placeholder="请输入" class="search-inp">
       <template #prepend>
         <span>{{ item.label }}</span>
       </template>
-      <template #append>
+      <!-- <template #append>
         <el-button :icon="Search" @click="doSearch(index)" />
-      </template>
+      </template> -->
     </el-input>
+    <el-button class="ml-4" type="primary">搜索</el-button>
+    <el-button>重置</el-button>
+    </div>
   </div>
 </template>
 
@@ -30,14 +35,19 @@ const doSearch = (index: number) => {
 
 <style lang="scss" scoped>
 .search {
+  padding: 20px;
+  &-con {
   display: flex;
-  padding: 16px;
+    background-color: $color-content;
+    padding: 24px 38px;
+  }
   &-inp {
     flex: 1;
-    margin-left: 12px;
+    margin-left: 36px;
     &:nth-of-type(1) {
       margin-left: 0;
     }
+    
   }
 }
 </style>

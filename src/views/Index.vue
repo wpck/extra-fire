@@ -23,7 +23,7 @@
         <div id="cloud"></div>
         <div class="hot-title">热词榜</div>
         <div v-for="(item, index) in hotWord" class="hot-word">
-          <span class="mr-2">{{ index + 1 }}</span>
+          <span class="mr-2 index" :class="{'hot1': index===0, 'hot2': index===1, 'hot3': index===2}">{{ index + 1 }}</span>
           {{ item.value }}
         </div>
       </div>
@@ -115,15 +115,32 @@ function handleSearch(key: string) {
   padding: 0 $content-padding;
   height: calc(100% - 80px);
   .side {
-    width: 200px;
+    width: 280px;
     margin-left: 16px;
     line-height: 32px;
     overflow: auto;
+    font-size: 18px;
     #cloud {
       height: 160px;
     }
     .hot-word {
-      border-bottom: 1px dashed #000;
+      border-bottom: 1px dashed $color-border;
+      line-height: 40px;
+      font-size: 16px;
+      cursor: pointer;
+      
+      .index {
+        color: #9195a3;
+      }
+      .hot1 {
+          color: #fe2d46;
+      }
+      .hot2 {
+        color: #ff6600;
+      }
+      .hot3 {
+        color: #faa90e;
+      }
     }
     .hot-title {
       font-weight: 600;

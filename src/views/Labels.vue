@@ -63,7 +63,7 @@ const setInitData = () => {
           position: 'left',
           verticalAlign: 'middle',
           align: 'right',
-          fontSize: 12,
+          fontSize: 16,
         },
         leaves: {
           label: {
@@ -161,9 +161,11 @@ const dataSource = ref<Tree[]>([
 <style lang="scss" scoped>
 .con-wrap {
   height: 100%;
+  background: transparent;
 }
 #hChart {
   height: 100%;
+  background: $color-content;
 }
 .tree {
   height: 100%;

@@ -48,7 +48,8 @@ const onSubmit = () => {
 <style scoped lang="scss">
 .con-mng {
   width: 80%;
-  margin: 16px auto;
+  margin: 24px auto;
+  height: 100%;
 }
 .up-icon {
   font-size: 32px;

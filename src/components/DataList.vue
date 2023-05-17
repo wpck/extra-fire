@@ -3,7 +3,14 @@
   <div class="content">
     <div class="data con-wrap">
       <div v-for="item in list" class="data-item">
-        <div class="item cursor-pointer link" @click="toDetail()">【{{ type === 2 ? '消防资讯' : '事故报告' }}】{{ item.title }}</div>
+        <div class="item cursor-pointer link" @click="toDetail()">
+          <div class="item-con">
+          <span class="title">
+            【{{ type === 2 ? '消防资讯' : '事故报告' }}】{{ item.title }}
+          </span>
+          <span class="time">2022-12-20</span>
+          </div>
+        </div>
       </div>
     </div>
     <el-pagination
@@ -54,12 +61,24 @@ const toDetail = () => {
     flex: 1;
     overflow: auto;
     &-item {
-      line-height: 36px;
       font-size: 18px;
       font-weight: 600;
       border-bottom: 1px dashed $color-border;
       padding-bottom: 12px;
       margin-bottom: 16px;
+      .item-con {
+        padding: 12px 24px;
+      }
+      
+      .title {
+          line-height: 36px;
+        }
+      .time {
+        color: gray;
+        font-size: 14px;
+        margin-left: 12px;
+        font-weight: normal;
+      }
     }
   }
   .page {

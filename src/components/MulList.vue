@@ -49,6 +49,9 @@ const handleCurrentChange = () => {}
   .data {
     flex: 1;
     overflow: auto;
+    .item {
+      padding: 12px 24px;
+    }
     &-item {
       line-height: 36px;
       font-size: 18px;
