@@ -1,6 +1,6 @@
 <template>
   <div class="content con-wrap">
-    <div v-for="item in list" @click="toDetail">
+    <div v-for="item in list" class="data-item" @click="toDetail">
       <ItemTitle :data="item" />
     </div>
   </div>
@@ -23,5 +23,12 @@ const toDetail = () => {
 <style lang="scss" scoped>
 .content {
   flex: 1;
+  min-width: 0;
+  overflow: auto;
+  .data-item {
+    border-bottom: 1px dashed $color-border;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
 }
 </style>

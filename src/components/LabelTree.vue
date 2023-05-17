@@ -1,5 +1,5 @@
 <template>
-  <el-tree :data="data" node-key="id" default-expand-all :expand-on-click-node="false" :render-content="renderContent" />
+  <el-tree :data="data" node-key="id" :props="defaultProps" default-expand-all :expand-on-click-node="false" :render-content="renderContent" />
 </template>
 
 <script lang="ts" setup>
@@ -14,6 +14,12 @@ interface Tree {
   children?: Tree[]
 }
 let id = 1000
+
+const defaultProps = {
+  isLeaf: () => {
+    return true
+  },
+}
 
 const renderContent = (
   h: any,

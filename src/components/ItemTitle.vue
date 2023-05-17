@@ -17,7 +17,7 @@ const props = defineProps<{
 }
 
 .desc {
-  height: 48px;
+  max-height: 48px;
   text-indent: 2em;
   line-height: 24px;
   word-break: break-all;
@@ -26,6 +26,5 @@ const props = defineProps<{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 这里是超出几行省略 */
   overflow: hidden;
-  margin-bottom: 20px;
 }
 </style>

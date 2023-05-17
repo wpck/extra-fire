@@ -10,8 +10,10 @@ import zhCN from 'element-plus/lib/locale/lang/zh-cn'
 
 <style lang="scss">
 * {
-  color: $color-font;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#app {
+  color: $color-font;
 }
 h3 {
   margin-bottom: 10px;
