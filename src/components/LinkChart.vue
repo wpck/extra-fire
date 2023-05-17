@@ -1,3 +1,4 @@
+<!-- 详情页图谱组件 -->
 <template><div id="chart"></div></template>
 
 <script lang="ts" setup>
@@ -14,8 +15,6 @@ onMounted(() => {
 function initChart() {
   myChart = echarts.init(document.querySelector('#chart'))
 
-  console.log(graph)
-  console.log(option)
   myChart?.setOption(option)
 }
 

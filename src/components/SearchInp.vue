@@ -1,6 +1,7 @@
+<!-- 通用搜索框 -->
 <template>
   <div class="search">
-    <el-input v-model="searchKey" placeholder="请输入" class="input-with-select">
+    <el-input v-model="searchKey" size="large" placeholder="请输入" class="input-with-select">
       <template #append>
         <el-button :icon="Search" @click="clickSearch" />
       </template>

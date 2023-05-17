@@ -15,3 +15,10 @@
 - [axios](https://www.axios-http.cn/docs/intro)
 - npm i axios
 - 新建 `src/utils/http` 文件夹用来存放 axios 类和 http 方法封装
+
+## 使用 iconify 作为图标库
+
+该图标库开源免费, 且支持多个库, 详见[官网](https://docs.iconify.design/icon-components/vue/)
+
+npm install --save-dev @iconify/vue
+图标本地化

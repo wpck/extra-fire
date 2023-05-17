@@ -20,10 +20,11 @@
       <div class="con-item">
         <h3 class="title">法律规范推荐</h3>
         <div class="content">
-          <div v-for="(item, index) in recList" class="item">
+          <el-tree :data="recList" :props="defaultProps" :expand-on-click-node="false" @node-click="nodeClick" />
+          <!-- <div v-for="(item, index) in recList" class="item">
             <span>{{ index + 1 }}.</span>
             <span>{{ item.title }}</span>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="wrap-br">
@@ -36,7 +37,10 @@
             </div>
           </div>
         </div>
-        <div class="con-item"><Carousel /></div>
+        <div class="con-item">
+          <h3 class="title">事故图片</h3>
+          <Carousel />
+        </div>
         <div class="con-item" style="margin-bottom: 0">
           <h3 class="title">相似案例推荐</h3>
           <div class="content">
@@ -49,16 +53,53 @@
       </div>
     </div>
   </div>
+
+  <el-dialog v-model="showContent" title="标题">
+    <span>
+      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    </span>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="showContent = false">取消</el-button>
+      </span>
+    </template>
+  </el-dialog>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import PreviewDetail from '@/components/PreviewDetail.vue'
 import LinkChart from '@/components/LinkChart.vue'
 import Carousel from '@/components/Carousel.vue'
 
-const recList = [{ title: '消防法 第三条' }, { title: '建筑规范' }, { title: '山东省生产安全条例' }]
+const defaultProps = {
+  label: 'title',
+}
+
+const showContent = ref<boolean>(false)
+
+const recList = [
+  {
+    title: '消防法',
+    children: [
+      {
+        title: '第一条',
+      },
+      {
+        title: '第二条',
+      },
+    ],
+  },
+  { title: '建筑规范' },
+  { title: '山东省生产安全条例' },
+]
 const opnList = [{ title: '意见一' }, { title: '意见二' }, { title: '意见三' }]
 const caseList = [{ title: '案例一' }, { title: '案例一' }, { title: '案例一' }]
+
+const nodeClick = a => {
+  console.log(a)
+  showContent.value = true
+}
 </script>
 
 <style lang="scss" scoped>

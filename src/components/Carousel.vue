@@ -1,3 +1,4 @@
+<!-- 详情页图片轮播组件 -->
 <template>
   <div class="wrap">
     <div class="imgs">
