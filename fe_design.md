@@ -21,3 +21,4 @@
 该图标库开源免费, 且支持多个库, 详见[官网](https://docs.iconify.design/icon-components/vue/)
 
 npm install --save-dev @iconify/vue
+图标本地化

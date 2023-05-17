@@ -12,6 +12,12 @@ export interface Statistics {
   information: number
 }
 
+export interface HotWords {
+  value: string
+}
+
 export type DeviceListModel = Result<DataListModel>
 
 export type StatisticsModel = Result<Statistics>
+
+export type HotWordsModel = Result<HotWords>

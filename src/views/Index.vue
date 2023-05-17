@@ -5,7 +5,7 @@
       <div class="left" :style="{ backgroundImage: `url('/imgs/${item.icon}.png')` }"></div>
       <div class="right flex-1">
         {{ item.label }}
-        <p>{{ statistics[item.key] }} 篇</p>
+        <p class="font-semibold">{{ statistics[item.key] }} 篇</p>
       </div>
     </div>
   </div>
@@ -20,10 +20,11 @@
 
       <!-- 热词区 -->
       <div class="side con-wrap">
-        <div class="hot-title">热词</div>
+        <div id="cloud"></div>
+        <div class="hot-title">热词榜</div>
         <div v-for="(item, index) in hotWord" class="hot-word">
           <span class="mr-2">{{ index + 1 }}</span>
-          {{ item }}
+          {{ item.value }}
         </div>
       </div>
     </div>
@@ -33,8 +34,9 @@
 import { ref } from 'vue'
 import IndexList from '@/components/IndexList.vue'
 import SearchInp from '@/components/SearchInp.vue'
-import { getStatisticsNum, getRecommendList } from '@/api'
+import { getStatisticsNum, getRecommendList, getHotWords } from '@/api'
 import { onMounted } from 'vue'
+import WordCloud from 'wordcloud'
 
 const moduleList = [
   { label: '事故报告', key: 'malfunction', icon: '2' },
@@ -47,6 +49,8 @@ const statistics = ref<any>({ malfunction: 300, standard: 200, reserve: 100, inf
 
 const list = ref<any[]>([])
 
+const hotWord = ref<any>([])
+
 onMounted(() => {
   getStatisticsNum().then(res => {
     statistics.value = res.data || {}
@@ -55,9 +59,21 @@ onMounted(() => {
     console.log(res)
     list.value = res.data || []
   })
+  getHotWords().then(res => {
+    hotWord.value = res.data || []
+    createCloud(hotWord.value)
+  })
 })
 
-const hotWord = ref<string[]>(['森林火灾', '火灾分类', '大火'])
+function createCloud(list) {
+  const res = list.map(i => {
+    if (i === 0) {
+      return [i.value, 20]
+    }
+    return [i.value, 14]
+  })
+  WordCloud(document.getElementById('cloud'), { list: res })
+}
 
 // 执行搜索
 function handleSearch(key: string) {
@@ -99,9 +115,16 @@ function handleSearch(key: string) {
   padding: 0 $content-padding;
   height: calc(100% - 80px);
   .side {
-    width: 160px;
+    width: 200px;
     margin-left: 16px;
     line-height: 32px;
+    overflow: auto;
+    #cloud {
+      height: 160px;
+    }
+    .hot-word {
+      border-bottom: 1px dashed #000;
+    }
     .hot-title {
       font-weight: 600;
     }
