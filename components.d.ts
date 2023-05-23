@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Carousel: typeof import('./src/components/Carousel.vue')['default']
     DataList: typeof import('./src/components/DataList.vue')['default']
+    DataNav: typeof import('./src/components/DataNav.vue')['default']
     Detail: typeof import('./src/components/Detail.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']

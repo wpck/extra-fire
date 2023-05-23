@@ -5,10 +5,13 @@
       <div v-for="item in list" class="data-item">
         <div class="item cursor-pointer link" @click="toDetail()">
           <div class="item-con">
-          <span class="title">
-            【{{ type === 2 ? '消防资讯' : '事故报告' }}】{{ item.title }}
-          </span>
-          <span class="time">2022-12-20</span>
+            <span class="title">
+              <span class="type-text">
+                【{{ type === 2 ? '消防资讯' : '事故报告' }}】
+              </span>
+              {{ item.title }}
+            </span>
+            <span class="time">2022-12-20</span>
           </div>
         </div>
       </div>
@@ -60,29 +63,36 @@ const toDetail = () => {
   .data {
     flex: 1;
     overflow: auto;
+    .item-con {
+      display: flex;
+      align-items: center;
+    }
     &-item {
-      font-size: 18px;
-      font-weight: 600;
+      font-size: 16px;
+      color: #5f96ca;
       border-bottom: 1px dashed $color-border;
       padding-bottom: 12px;
       margin-bottom: 16px;
-      .item-con {
-        padding: 12px 24px;
+      .type-text {
+        color: #0c860c;
       }
-      
       .title {
-          line-height: 36px;
-        }
+        line-height: 36px;
+        flex: 1;
+      }
       .time {
+        width: 74px;
         color: gray;
         font-size: 14px;
         margin-left: 12px;
         font-weight: normal;
+        color: #ff4141;
       }
     }
   }
   .page {
     padding: 16px 0;
+    justify-content: flex-end;
   }
 }
 </style>

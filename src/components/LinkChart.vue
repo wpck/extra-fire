@@ -104,7 +104,7 @@ const option = {
 <style scoped lang="scss">
 #chart {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 64px);
   min-height: inherit;
 }
 </style>

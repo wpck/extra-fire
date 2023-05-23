@@ -63,6 +63,7 @@ const handleCurrentChange = () => {}
   }
   .page {
     padding: 16px 0;
+    justify-content: flex-end;
   }
 }
 </style>

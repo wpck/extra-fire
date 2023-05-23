@@ -1,10 +1,12 @@
 <template>
+  <DataNav title="标准规范" />
   <MulSearch />
   <MulList :list="list" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import DataNav from '@/components/DataNav.vue'
 import MulSearch from '@/components/MulSearch.vue'
 import MulList from '@/components/MulList.vue'
 

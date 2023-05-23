@@ -22,6 +22,8 @@ const props = defineProps<{
   background: gray;
   margin-right: 12px;
   cursor: pointer;
+  background-image: url('https://p2.img.cctvpic.com/fmspic/2023/05/12/e445bab0afa04448b8b9a6ce17ffc701-1.jpg');
+  background-size: cover;
   &:hover {
     transform: scale(1.05);
     transition: all 0.3s linear;

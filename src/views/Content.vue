@@ -20,6 +20,10 @@
         </el-form-item>
       </template>
     </el-form>
+    <div class="btn">
+      <el-button type="primary">提交</el-button>
+      <el-button>取消</el-button>
+    </div>
   </div>
 </template>
 
@@ -50,8 +54,15 @@ const onSubmit = () => {
   width: 80%;
   margin: 24px auto;
   height: 100%;
+  position: relative;
 }
 .up-icon {
   font-size: 32px;
+}
+.btn {
+  // position: absolute;
+  // bottom: 16px;
+  // right: 16px;
+  text-align: right;
 }
 </style>

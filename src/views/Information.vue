@@ -1,10 +1,12 @@
 <template>
+  <DataNav title="消防咨询" />
   <SearchInp />
   <DataList :list="list" :type="2" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import DataNav from '@/components/DataNav.vue'
 import SearchInp from '@/components/SearchInp.vue'
 import DataList from '@/components/DataList.vue'
 
