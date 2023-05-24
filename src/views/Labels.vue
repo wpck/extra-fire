@@ -37,6 +37,10 @@ let myChart: any = null
 onMounted(() => {
   myChart = echarts.init(document.querySelector('#hChart'))
   setInitData()
+  // myChart.on('mouseover', 'series.label', function (A,B) {
+  myChart.on('mouseover', {seriesName: 'haha'}, function (A,B) {
+    console.log(A,A.event.event.clientX, A.event.event.clientY)
+  });
 })
 
 const setInitData = () => {
@@ -52,6 +56,7 @@ const setInitData = () => {
     },
     series: [
       {
+        name: 'haha',
         type: 'tree',
         data: [data],
         top: '1%',
@@ -59,11 +64,36 @@ const setInitData = () => {
         bottom: '1%',
         right: '20%',
         symbolSize: 7,
+        // symbol: function(a,b,c){
+        //   console.log(a,b,c)
+        //   return '+'
+        // },
         label: {
           position: 'left',
           verticalAlign: 'middle',
           align: 'right',
           fontSize: 16,
+          // formatter: '{b}{btn|+ -}',
+          formatter: (a,b)=>{console.log(a,b)},
+
+          rich: {
+              btn: {
+                  color: 'red',
+                  lineHeight: 10
+              },
+              b: {
+                  backgroundColor: {
+                      image: 'xxx/xxx.jpg'
+                  },
+                  height: 40
+              },
+              x: {
+                  fontSize: 18,
+                  fontFamily: 'Microsoft YaHei',
+                  borderColor: '#449933',
+                  borderRadius: 4
+              },
+          }
         },
         leaves: {
           label: {
@@ -78,6 +108,7 @@ const setInitData = () => {
         expandAndCollapse: true,
         animationDuration: 550,
         animationDurationUpdate: 750,
+        
       },
     ],
   }

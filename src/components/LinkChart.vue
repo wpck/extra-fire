@@ -68,6 +68,31 @@ const option = {
     },
   ],
   series: [
+  // {
+  //       name: 'Les Miserables',
+  //       type: 'graph',
+  //       layout: 'none',
+  //       data: graph.nodes,
+  //       links: graph.links,
+  //       categories: graph.categories,
+  //       roam: true,
+  //       label: {
+  //         show: true,
+  //         position: 'right',
+  //         formatter: '{b}'
+  //       },
+  //       labelLayout: {
+  //         hideOverlap: true
+  //       },
+  //       scaleLimit: {
+  //         min: 0.4,
+  //         max: 2
+  //       },
+  //       lineStyle: {
+  //         color: 'source',
+  //         curveness: 0.3
+  //       },
+  //     }
     {
       name: '图谱',
       type: 'graph',
@@ -83,7 +108,9 @@ const option = {
       force: {
         repulsion: 1000,
         edgeLength: [2, 10],
-        layoutAnimation: false,
+        layoutAnimation: true,
+        gravity: 0.4,
+        friction: 0.1
       },
       labelLayout: {
         hideOverlap: true,
