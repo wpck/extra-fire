@@ -1,18 +1,18 @@
 import defHttp from '@/utils/http'
 import { StatisticsModel, HotWordsModel } from '../model'
 
-const modelUrl = '/api'
+const modelUrl = '/firedata'
 
 enum Api {
-  StatisticsNum = '/statistics_num/', // 首页文章统计
+  StatisticsNum = '/count/', // 首页文章统计
   HotWords = '/hot_words/', // 首页热词
 }
 
 /**
  * @description: 获取文章统计数量
  */
-export const getStatisticsNum = () => {
-  return defHttp.get<StatisticsModel>({ url: modelUrl + Api.StatisticsNum })
+export const getStatisticsNum = (category?: string) => {
+  return defHttp.get<StatisticsModel>({ url: modelUrl + Api.StatisticsNum, params: { category: category || 'all' } })
 }
 
 export const getHotWords = () => {

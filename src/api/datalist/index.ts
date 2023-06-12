@@ -2,10 +2,11 @@
 import defHttp from '@/utils/http'
 import { DataListModel } from '../model'
 
-const modelUrl = '/api'
+const modelUrl = '/firedata'
 
 enum Api {
-  RecommendList = '/recommend_list/', // 获取首页推荐列表
+  RecommendList = '/recommend/', // 获取首页推荐列表
+  Search = '/search/',
 }
 
 /**
@@ -13,4 +14,11 @@ enum Api {
  */
 export const getRecommendList = () => {
   return defHttp.get<DataListModel>({ url: modelUrl + Api.RecommendList })
+}
+
+/**
+ * @description: 获取搜索列表
+ */
+export const getSearchList = (params?: { query?: string; category?: string }) => {
+  return defHttp.get<DataListModel>({ url: modelUrl + Api.Search, params: { query: params?.query || '', category: params?.category || 'all' } })
 }

@@ -3,20 +3,11 @@
   <div class="con-wrap">
     <div id="hChart"></div>
   </div>
-  <!-- <div class="flex p-4 tree">
-    <div class="tree-item con-wrap">
-      <h3>火灾事故</h3>
-      <LabelTree :data="dataSource" />
-    </div>
-    <div class="tree-item con-wrap">
-      <h3>标准资讯</h3>
-      <LabelTree :data="dataSource" />
-    </div>
-    <div class="tree-item con-wrap">
-      <h3>预案</h3>
-      <LabelTree :data="dataSource" @handle="handleLabel" />
-    </div>
-  </div> -->
+
+  <div class="oprt-btn" ref="btn" v-show="showBtn">
+    <div>新增</div>
+    <div>删除</div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -34,13 +25,18 @@ interface Tree {
 let id = 1000
 let myChart: any = null
 
+const showBtn = ref<boolean>(false)
+
 onMounted(() => {
   myChart = echarts.init(document.querySelector('#hChart'))
   setInitData()
-  // myChart.on('mouseover', 'series.label', function (A,B) {
-  myChart.on('mouseover', {seriesName: 'haha'}, function (A,B) {
-    console.log(A,A.event.event.clientX, A.event.event.clientY)
-  });
+  myChart.on('mouseover', { seriesName: 'haha' }, function (A, B) {
+    console.log(A, A.event.event.clientX, A.event.event.clientY)
+    let el = document.querySelector('.oprt-btn')
+    el.style.left = A.event.event.clientX + 'px'
+    el.style.top = A.event.event.clientY + 'px'
+    showBtn.value = true
+  })
 })
 
 const setInitData = () => {
@@ -74,26 +70,28 @@ const setInitData = () => {
           align: 'right',
           fontSize: 16,
           // formatter: '{b}{btn|+ -}',
-          formatter: (a,b)=>{console.log(a,b)},
+          formatter: (a, b) => {
+            console.log(a, b)
+          },
 
           rich: {
-              btn: {
-                  color: 'red',
-                  lineHeight: 10
+            btn: {
+              color: 'red',
+              lineHeight: 10,
+            },
+            b: {
+              backgroundColor: {
+                image: 'xxx/xxx.jpg',
               },
-              b: {
-                  backgroundColor: {
-                      image: 'xxx/xxx.jpg'
-                  },
-                  height: 40
-              },
-              x: {
-                  fontSize: 18,
-                  fontFamily: 'Microsoft YaHei',
-                  borderColor: '#449933',
-                  borderRadius: 4
-              },
-          }
+              height: 40,
+            },
+            x: {
+              fontSize: 18,
+              fontFamily: 'Microsoft YaHei',
+              borderColor: '#449933',
+              borderRadius: 4,
+            },
+          },
         },
         leaves: {
           label: {
@@ -108,7 +106,6 @@ const setInitData = () => {
         expandAndCollapse: true,
         animationDuration: 550,
         animationDurationUpdate: 750,
-        
       },
     ],
   }
@@ -213,5 +210,10 @@ const dataSource = ref<Tree[]>([
       margin-bottom: 12px;
     }
   }
+}
+
+.oprt-btn {
+  position: fixed;
+  // visibility: hidden;
 }
 </style>

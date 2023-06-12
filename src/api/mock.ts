@@ -3,27 +3,31 @@ import Mock, { Random } from 'mockjs'
 console.log('mockjs')
 
 const list: any = []
-const typeList = ['事故报告', '消防资讯', '标准规范', '预案']
+const typeList = ['news', 'report', 'standard', 'preplan']
 function genList() {
   for (let i = 0; i < 20; i++) {
-    list.push({ title: Random.cparagraph(), type: typeList[Random.natural(0, 3)], desc: Random.cparagraph(), date: '2023-04-12' })
+    list.push({ title: Random.cparagraph(), category: typeList[Random.natural(0, 3)], content: Random.cparagraph(), time: '2023-04-12', picture: '' })
   }
 }
 genList()
 
-Mock.mock('/api/recommend_list/', { status: 200, data: list })
+Mock.mock('/firedata/recommend/', { status: 200, data: { list } })
 
-Mock.mock('/api/statistics_num/', {
-  status: 200,
+Mock.mock('/firedata/count/?category=all', {
+  success: true,
+  code: 20000,
+  message: '成功',
   data: {
-    malfunction: Random.natural(200, 600),
-    standard: Random.natural(200, 600),
-    reserve: Random.natural(200, 600),
-    information: Random.natural(200, 600),
+    list: [
+      { category: 'report', count: '5' },
+      { category: 'news', count: '6' },
+      { category: 'standard', count: '7' },
+      { category: 'preplan', count: '8' },
+    ],
   },
 })
 
-Mock.mock('/api/hot_words/', {
+Mock.mock('/firedata/hot_words/', {
   status: 200,
   data: [
     { value: '北京火灾最新消息2023' },

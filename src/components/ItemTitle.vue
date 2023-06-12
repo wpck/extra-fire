@@ -3,13 +3,14 @@
     <div class="left"></div>
     <div class="right">
       <div class="cursor-pointer title">{{ data.title }}</div>
-      <div class="desc truncate">{{ data.desc }}</div>
-      <div class="type">{{ data.type }}</div>
+      <div class="desc truncate">{{ data.content }}</div>
+      <div class="type">{{ categotyMap[data.category] }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { categotyMap } from '@/utils'
 const props = defineProps<{
   data: any
 }>()

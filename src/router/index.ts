@@ -22,15 +22,15 @@ const routes = [
         },
       },
       {
-        path: '/malfunction',
-        component: import('@/views/Malfunction.vue'),
+        path: '/report',
+        component: import('@/views/Report.vue'),
         meta: {
           title: '事故报告',
         },
       },
       {
-        path: '/information',
-        component: import('@/views/Information.vue'),
+        path: '/news',
+        component: import('@/views/News.vue'),
         meta: {
           title: '消防咨询',
         },
@@ -43,8 +43,8 @@ const routes = [
         },
       },
       {
-        path: '/reserve',
-        component: import('@/views/Reserve.vue'),
+        path: '/preplan',
+        component: import('@/views/Preplan.vue'),
         meta: {
           title: '预案',
         },

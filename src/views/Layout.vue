@@ -40,10 +40,10 @@ const menuList: Array<{ index: string; title: string; icon: string; children?: A
     title: '事故数据',
     icon: 'cil:folder-open',
     children: [
-      { index: '/malfunction', title: '事故报告', icon: 'cil-file' },
-      { index: '/information', title: '消防资讯', icon: 'cil-file' },
+      { index: '/report', title: '事故报告', icon: 'cil-file' },
+      { index: '/news', title: '消防资讯', icon: 'cil-file' },
       { index: '/standard', title: '标准规范', icon: 'cil-file' },
-      { index: '/reserve', title: '预案', icon: 'cil-file' },
+      { index: '/preplan', title: '预案', icon: 'cil-file' },
     ],
   },
   { index: '/content', title: '内容管理', icon: 'cil-paperclip' },
