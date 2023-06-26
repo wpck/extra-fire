@@ -1,7 +1,12 @@
 <template>
     <div class="nav">
-        <span class="pre">事故数据 /</span>
-        {{ title }}
+        <div>
+            <span class="pre">事故数据 /</span>
+            {{ title }}
+        </div>
+        <div class="right">
+            <slot name="right"></slot>
+        </div>
     </div>
 </template>
 
@@ -15,8 +20,13 @@ const props = defineProps<{
 .nav {
     padding: 16px 16px 0;
     font-size: 14px;
+    display: flex;
+    align-items: center;
     .pre {
         color: #919191;
+    }
+    .right {
+        flex: 1;
     }
 }
 </style>

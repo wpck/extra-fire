@@ -1,7 +1,9 @@
 <!-- 标签体系页面 -->
 <template>
   <div class="con-wrap">
-    <div id="hChart"></div>
+    <div class="chart-wrap">
+     <div id="hChart"></div>
+    </div>
   </div>
 
   <div class="oprt-btn" ref="btn" v-show="showBtn">
@@ -30,13 +32,7 @@ const showBtn = ref<boolean>(false)
 onMounted(() => {
   myChart = echarts.init(document.querySelector('#hChart'))
   setInitData()
-  myChart.on('mouseover', { seriesName: 'haha' }, function (A, B) {
-    console.log(A, A.event.event.clientX, A.event.event.clientY)
-    let el = document.querySelector('.oprt-btn')
-    el.style.left = A.event.event.clientX + 'px'
-    el.style.top = A.event.event.clientY + 'px'
-    showBtn.value = true
-  })
+  // myg
 })
 
 const setInitData = () => {
@@ -70,9 +66,9 @@ const setInitData = () => {
           align: 'right',
           fontSize: 16,
           // formatter: '{b}{btn|+ -}',
-          formatter: (a, b) => {
-            console.log(a, b)
-          },
+          // formatter: (a, b) => {
+          //   console.log(a, b)
+          // },
 
           rich: {
             btn: {
@@ -93,6 +89,7 @@ const setInitData = () => {
             },
           },
         },
+        initialTreeDepth: 20,
         leaves: {
           label: {
             position: 'right',
@@ -132,68 +129,22 @@ const remove = (node: Node, data: Tree) => {
 const handleLabel = (data: any) => {
   console.log(data)
   console.log(dataSource.value)
-  // dataSource.value = data
 }
 
-const dataSource = ref<Tree[]>([
-  {
-    id: 1,
-    label: '节点1',
-    children: [
-      {
-        id: 4,
-        label: '节点1-1',
-        children: [
-          {
-            id: 9,
-            label: '节点1-1-1',
-          },
-          {
-            id: 10,
-            label: '节点1-1-2',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    label: '节点2',
-    children: [
-      {
-        id: 5,
-        label: '节点2-1',
-      },
-      {
-        id: 6,
-        label: '节点2-2',
-      },
-    ],
-  },
-  {
-    id: 3,
-    label: '节点3',
-    children: [
-      {
-        id: 7,
-        label: '节点3-1',
-      },
-      {
-        id: 8,
-        label: '节点3-2',
-      },
-    ],
-  },
-])
+const dataSource = ref<Tree[]>([])
 </script>
 <style lang="scss" scoped>
 .con-wrap {
   height: 100%;
   background: transparent;
+  .chart-wrap {
+    height: 100%;
+    background: $color-content;
+    padding: 0 12px;
+  }
 }
 #hChart {
   height: 100%;
-  background: $color-content;
 }
 .tree {
   height: 100%;

@@ -12,7 +12,7 @@
 
   <div class="bottom">
     <!-- 搜索区域 -->
-    <SearchInp @handleSearch="handleSearch" />
+    <SearchInp :keyWord="searchKey" @handleSearch="handleSearch" />
 
     <div class="main">
       <!-- 列表展示区域 -->
@@ -22,7 +22,7 @@
       <div class="side con-wrap">
         <div id="cloud"></div>
         <div class="hot-title">热词榜</div>
-        <div v-for="(item, index) in hotWord" class="hot-word">
+        <div v-for="(item, index) in hotWord" class="hot-word" @click="getHotList(item)">
           <span class="mr-2 index" :class="{ hot1: index === 0, hot2: index === 1, hot3: index === 2 }">{{ index + 1 }}</span>
           {{ item.value }}
         </div>
@@ -51,6 +51,8 @@ const list = ref<any[]>([])
 
 const hotWord = ref<any>([])
 
+const searchKey = ref('')
+
 onMounted(() => {
   getStatisticsNum().then(res => {
     const s_data: any = {}
@@ -72,11 +74,17 @@ onMounted(() => {
 function createCloud(list) {
   const res = list.map(i => {
     if (i === 0) {
-      return [i.value, 20]
+      return [i.value, 28]
     }
     return [i.value, 14]
   })
-  WordCloud(document.getElementById('cloud'), { list: res })
+  WordCloud(document.getElementById('cloud'), { list: res, click(val) {
+    searchKey.value = val[0]
+  } })
+}
+
+function getHotList(hot) {
+  searchKey.value = hot.value
 }
 
 // 执行搜索

@@ -1,4 +1,14 @@
 <template>
+  <DataNav title="事故报告">
+    <template v-slot:right>
+      <div class="top">
+        <span class="top-title">nihhhad</span>
+        <span class="top-back" @click="goBack">返回</span>
+      </div>
+    </template>
+
+  </DataNav>
+
   <div class="detail">
     <div class="con">
       <!-- 原文 -->
@@ -23,9 +33,9 @@
           <h3 class="title">事故图片</h3>
           <Carousel />
         </div>
-        <div class="con-item">
+        <div class="con-item bot-list">
           <h3 class="title">法律规范推荐</h3>
-          <div class="content" style="height: calc(100% - 50px); overflow: auto;">
+          <div class="content">
             <div v-for="(item,index) in recList" :key="index">
               <div class="flex item">
                 <div class="icon">
@@ -44,36 +54,20 @@
                 </div>
               </div>
             </div>
-
-            <!-- <el-tree :data="recList" :props="defaultProps" :expand-on-click-node="false" @node-click="nodeClick" /> -->
-
-            <!-- <el-tree
-              :data="recList"
-              :props="defaultProps"
-              :expand-on-click-node="false">
-              <template #default="{ node, data }">
-                <span class="custom-tree-node">
-                  <span>{{ node.label }}</span>
-                  <div v-if="!!data.content">
-                    {{data.content}}
-                  </div>
-                </span>
-              </template>
-            </el-tree> -->
           </div>
         </div>
       </div>
       <div class="wrap-br">
         <div class="con-item">
           <h3 class="title">意见</h3>
-          <div class="content">
+          <div class="content opn-list">
             <div v-for="(item, index) in opnList" class="item">
               <span>{{ index + 1 }}.</span>
               <span>{{ item.title }}</span>
             </div>
           </div>
         </div>
-        <div class="con-item" style="margin-bottom: 0">
+        <div class="con-item bot-list" style="margin-bottom: 0">
           <h3 class="title">相似案例推荐</h3>
           <div class="content">
             <div v-for="(item, index) in caseList" class="item">
@@ -104,6 +98,9 @@ import PreviewDetail from '@/components/PreviewDetail.vue'
 import LinkChart from '@/components/LinkChart.vue'
 import Carousel from '@/components/Carousel.vue'
 import { Icon } from '@iconify/vue'
+import DataNav from '@/components/DataNav.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const defaultProps = {
   label: 'title',
@@ -155,6 +152,9 @@ function toggleExpand(index) {
   const isShow = recList.value[index].show
   recList.value[index].show=!isShow
 }
+function goBack() {
+  router.go(-1)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -162,6 +162,18 @@ function toggleExpand(index) {
   padding: 16px;
   height: 100%;
   font-size: 14px;
+}
+.top {
+  display: flex;
+  
+  &-title {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+  }
+  &-back {
+    cursor: pointer;
+  }
 }
 .con {
   display: flex;
@@ -194,15 +206,29 @@ function toggleExpand(index) {
   .wrap-br {
     flex: 1;
     margin-bottom: 16px;
-    margin-left: 12px;
     margin-bottom: 16px;
     width: 0;
+    margin-left: 12px;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
     .content {
       min-height: 0;
+      &.opn-list {
+        height: 124px;
+        overflow: auto;
+      }
     }
     .con-item {
       margin-left: 0;
     }
+    .bot-list {
+        height: calc(100% - 178px);
+        .content {
+          height: calc(100% - 54px);
+          overflow: auto;
+        }
+      }
   }
 }
 

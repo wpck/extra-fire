@@ -1,13 +1,19 @@
 <template>
   <div class="content">
     <div class="data con-wrap">
-      <div v-for="item in list" class="data-item">
+      <!-- <div v-for="item in list" class="data-item">
         <div class="item">
           <span>{{ item.title }}</span>
           <span class="ml-2">{{ item.no }}</span>
           <span class="ml-2">{{ item.year }}</span>
         </div>
-      </div>
+      </div> -->
+      <el-table :data="list" border style="width: 100%">
+        <el-table-column prop="no" label="编号" width="180"> </el-table-column>
+        <el-table-column prop="title" label="名称" width="180"> </el-table-column>
+        <el-table-column prop="compny" label="起草单位"> </el-table-column>
+        <el-table-column prop="date" label="发布日期"> </el-table-column>
+      </el-table>
     </div>
     <el-pagination
       class="page"

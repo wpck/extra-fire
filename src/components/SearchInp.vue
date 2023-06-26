@@ -10,9 +10,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 
+const props = defineProps<{
+  keyWord?: string
+}>()
 const emits = defineEmits<{
   (event: 'handleSearch', key: string): void
 }>()
@@ -23,6 +26,10 @@ const searchKey = ref<string>('')
 function clickSearch() {
   emits('handleSearch', searchKey)
 }
+
+watch(() => props.keyWord, (val, old) => {
+  searchKey.value = val
+})
 </script>
 
 <style lang="scss" scoped>

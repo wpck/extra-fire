@@ -1,25 +1,16 @@
 <template>
   <div class="con-wrap con-mng">
-    <el-form :model="form" label-width="120px">
-      <el-form-item label="文章类别">
-        <el-select v-model="form.type" placeholder="请选择文章类别">
-          <el-option v-for="item in typeList" :label="item.label" :value="item.value" />
-        </el-select>
-      </el-form-item>
-      <el-form-item label="上传文件">
-        <el-upload>
-          <el-icon class="up-icon"><Document /></el-icon>
-        </el-upload>
-      </el-form-item>
-      <template v-if="['3', '4'].includes(form.type)">
-        <el-form-item label="编号">
-          <el-input />
-        </el-form-item>
-        <el-form-item label="发布日期">
-          <el-date-picker v-model="form.date" type="date" placeholder="请选择日期" />
-        </el-form-item>
-      </template>
-    </el-form>
+    <div class="el-form">
+      <div class="el-form-item">
+        <span class="el-form-item__label common-label">文章类别</span>
+        <div class="el-form-item">
+          <el-select v-model="contentType" placeholder="请选择文章类别">
+            <el-option v-for="item in typeList" :label="item.label" :value="item.value" />
+          </el-select>
+        </div>
+      </div>
+      <Form :type="contentType" />
+    </div>
     <div class="btn">
       <el-button type="primary">提交</el-button>
       <el-button>取消</el-button>
@@ -28,8 +19,8 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-import { Document } from '@element-plus/icons-vue'
+import { reactive, ref } from 'vue'
+import Form from '@/components/form/Form.vue'
 
 const typeList = [
   { label: '事故报告', value: '1' },
@@ -37,6 +28,8 @@ const typeList = [
   { label: '预案', value: '3' },
   { label: '资讯', value: '4' },
 ]
+
+const contentType = ref('2')
 
 // do not use same name with ref
 const form = reactive({
@@ -51,8 +44,7 @@ const onSubmit = () => {
 
 <style scoped lang="scss">
 .con-mng {
-  width: 80%;
-  margin: 24px auto;
+  margin: 16px;
   height: 100%;
   position: relative;
 }
@@ -60,9 +52,13 @@ const onSubmit = () => {
   font-size: 32px;
 }
 .btn {
+  padding-left: 120px;
   // position: absolute;
   // bottom: 16px;
   // right: 16px;
-  text-align: right;
+  // text-align: right;
+}
+.common-label {
+  width: 120px;
 }
 </style>
