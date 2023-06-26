@@ -3,7 +3,7 @@
     <div class="con">
       <!-- 原文 -->
       <div class="con-item">
-        <h3 class="title">原文</h3>
+        <h3 class="title">事故调查报告</h3>
         <div class="content">
           <PreviewDetail />
         </div>
@@ -18,44 +18,49 @@
     </div>
     <div class="con">
       <!-- 规范推荐 -->
-      <div class="con-item">
-        <h3 class="title">法律规范推荐</h3>
-        <div class="content" style="height: calc(100% - 50px); overflow: auto;">
-          <div v-for="(item,index) in recList" :key="index">
-            <div class="flex item">
-              <div class="icon">
-                <template v-if="!!item.children">
-                  <Icon v-if="item.show" icon="mdi:expand-more" @click="toggleExpand(index)" />
-                  <Icon v-else icon="mdi:expand-less" @click="toggleExpand(index)" />
-                </template>
-              </div>
-
-              <span class="pointer" @click="nodeClick">{{ item.title }}</span>
-            </div>
-            <div class="child" v-show="item.show">
-              <div v-for="(c, j) in item.children">
-              <p>{{ c.title }}</p>
-              <div>{{ c.content }}</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <el-tree :data="recList" :props="defaultProps" :expand-on-click-node="false" @node-click="nodeClick" /> -->
-
-          <!-- <el-tree
-            :data="recList"
-            :props="defaultProps"
-            :expand-on-click-node="false">
-            <template #default="{ node, data }">
-              <span class="custom-tree-node">
-                <span>{{ node.label }}</span>
-                <div v-if="!!data.content">
-                  {{data.content}}
+      <div class="wrap-br">
+        <div class="con-item">
+          <h3 class="title">事故图片</h3>
+          <Carousel />
+        </div>
+        <div class="con-item">
+          <h3 class="title">法律规范推荐</h3>
+          <div class="content" style="height: calc(100% - 50px); overflow: auto;">
+            <div v-for="(item,index) in recList" :key="index">
+              <div class="flex item">
+                <div class="icon">
+                  <template v-if="!!item.children">
+                    <Icon v-if="item.show" icon="mdi:expand-more" @click="toggleExpand(index)" />
+                    <Icon v-else icon="mdi:expand-less" @click="toggleExpand(index)" />
+                  </template>
                 </div>
-              </span>
-            </template>
-          </el-tree> -->
 
+                <span class="pointer" @click="nodeClick">{{ item.title }}</span>
+              </div>
+              <div class="child" v-show="item.show">
+                <div v-for="(c, j) in item.children">
+                  <p>{{ c.title }}</p>
+                  <div>{{ c.content }}</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <el-tree :data="recList" :props="defaultProps" :expand-on-click-node="false" @node-click="nodeClick" /> -->
+
+            <!-- <el-tree
+              :data="recList"
+              :props="defaultProps"
+              :expand-on-click-node="false">
+              <template #default="{ node, data }">
+                <span class="custom-tree-node">
+                  <span>{{ node.label }}</span>
+                  <div v-if="!!data.content">
+                    {{data.content}}
+                  </div>
+                </span>
+              </template>
+            </el-tree> -->
+          </div>
         </div>
       </div>
       <div class="wrap-br">
@@ -67,10 +72,6 @@
               <span>{{ item.title }}</span>
             </div>
           </div>
-        </div>
-        <div class="con-item">
-          <h3 class="title">事故图片</h3>
-          <Carousel />
         </div>
         <div class="con-item" style="margin-bottom: 0">
           <h3 class="title">相似案例推荐</h3>
@@ -177,6 +178,7 @@ function toggleExpand(index) {
     &:nth-of-type(1) {
       margin-left: 0;
     }
+    overflow: auto;
     .title {
       padding: 8px 16px;
       background: $color-main;
