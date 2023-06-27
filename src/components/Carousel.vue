@@ -2,24 +2,37 @@
 <template>
   <div class="wrap">
     <div class="imgs">
-      <img v-for="(img, index) in imgs" :src="img.url" class="imgs-pic" :alt="'图片' + index" @click="preview(img)" />
-      <img v-for="(img, index) in imgs" :src="img.url" class="imgs-pic" :alt="'图片' + index" @click="preview(img)"  />
+      <img v-for="(url, index) in imgs" :src="`http://localhost:5173/testdata/imgs/${url}`" class="imgs-pic" :alt="'图片' + index" @click="preview(url)" />
+      <img v-for="(url, index) in imgs" :src="`http://localhost:5173/testdata/imgs/${url}`" class="imgs-pic" :alt="'图片' + index" @click="preview(url)"  />
     </div>
   </div>
+
+  <el-dialog v-model="showContent" title="">
+    <div style="height: 400px; overflow: auto;">
+      <img :src="previewUrl" style="margin: 0 auto">
+    </div>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="showContent = false">取消</el-button>
+      </span>
+    </template>
+  </el-dialog>
 </template>
 
 <script setup lang="ts">
-const imgs = [
-  { url: 'http://127.0.0.1:5500/public/vAUrMxaME3.jpg' },
-  { url: 'http://127.0.0.1:5500/public/vAUrMxaME3.jpg' },
-  { url: 'http://127.0.0.1:5500/public/vAUrMxaME3.jpg' },
-  { url: 'http://127.0.0.1:5500/public/vAUrMxaME3.jpg' },
-  { url: 'http://127.0.0.1:5500/public/vAUrMxaME3.jpg' },
-]
+import { ref } from 'vue'
+const props = defineProps<{
+  imgs: Array<string>
+}>()
 
-const preview = (img) => {
-  console.log(img)
+const showContent = ref(false)
+const previewUrl = ref('')
+
+const preview = (url) => {
+  previewUrl.value = `http://localhost:5173/testdata/imgs/${url}`
+  showContent.value = true
 }
+
 
 </script>
 
@@ -40,7 +53,7 @@ const preview = (img) => {
 }
 
 .imgs {
-  animation: scrollHorz 20s linear infinite;
+  animation: scrollHorz 30s linear infinite;
   display: flex;
   width: max-content;
   position: absolute;

@@ -24,3 +24,5 @@ export type DeviceListModel = Result<DataListModel>
 export type StatisticsModel = Result<{ list: Array<Statistics> }>
 
 export type HotWordsModel = Result<HotWords>
+
+export type DetailModel = Result<any>

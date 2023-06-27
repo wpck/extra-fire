@@ -2,7 +2,7 @@
   <DataNav title="事故报告">
     <template v-slot:right>
       <div class="top">
-        <span class="top-title">nihhhad</span>
+        <span class="top-title">{{ detailData.title }}</span>
         <span class="top-back" @click="goBack">返回</span>
       </div>
     </template>
@@ -14,15 +14,15 @@
       <!-- 原文 -->
       <div class="con-item">
         <h3 class="title">事故调查报告</h3>
-        <div class="content">
-          <PreviewDetail />
+        <div class="content" style="height: calc(100% - 60px);">
+          <PreviewDetail :url="`${detailData.content.file}#scrollbars=0&toolbar=0&statusbar=0`" />
         </div>
       </div>
       <!-- echarts图谱 -->
       <div class="con-item">
         <h3 class="title">事故图谱</h3>
         <div class="content" style="height: 100%">
-          <LinkChart />
+          <LinkChart :data="detailData" />
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
       <div class="wrap-br">
         <div class="con-item">
           <h3 class="title">事故图片</h3>
-          <Carousel />
+          <Carousel :imgs="detailData.pics" />
         </div>
         <div class="con-item bot-list">
           <h3 class="title">法律规范推荐</h3>
@@ -45,7 +45,7 @@
                   </template>
                 </div>
 
-                <span class="pointer" @click="nodeClick">{{ item.title }}</span>
+                <span class="pointer" @click="nodeClick(item)">{{ item.title }}</span>
               </div>
               <div class="child" v-show="item.show">
                 <div v-for="(c, j) in item.children">
@@ -80,10 +80,10 @@
     </div>
   </div>
 
-  <el-dialog v-model="showContent" title="标题">
-    <span>
-      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-    </span>
+  <el-dialog v-model="showContent" :title="previewFile.title">
+    <div style="height: 400px">
+      <PreviewDetail :url="`${previewFile.file}#scrollbars=0&toolbar=0&statusbar=0`" />
+    </div>
     <template #footer>
       <span class="dialog-footer">
         <el-button @click="showContent = false">取消</el-button>
@@ -93,7 +93,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import PreviewDetail from '@/components/PreviewDetail.vue'
 import LinkChart from '@/components/LinkChart.vue'
 import Carousel from '@/components/Carousel.vue'
@@ -101,6 +101,7 @@ import { Icon } from '@iconify/vue'
 import DataNav from '@/components/DataNav.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+import { getDetailData } from '@/api/detail'
 
 const defaultProps = {
   label: 'title',
@@ -140,11 +141,26 @@ const recList = ref<any[]>([
   // { title: '建筑规范' },
   // { title: '山东省生产安全条例' },
 ])
+const previewFile = ref({})
 const opnList = [{ title: '意见一' }, { title: '意见二' }, { title: '意见三' }]
 const caseList = [{ title: '案例一' }, { title: '案例一' }, { title: '案例一' }]
 
-const nodeClick = a => {
-  console.log(a)
+const detailData = ref({content: {}})
+
+onMounted(() => {
+  getDetail()
+})
+
+function getDetail() {
+  getDetailData().then(res => {
+    console.log(res)
+    detailData.value = res.data
+    recList.value = res.data.recList
+  })
+}
+
+const nodeClick = file => {
+  previewFile.value = file
   showContent.value = true
 }
 

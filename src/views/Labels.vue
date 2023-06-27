@@ -7,8 +7,8 @@
   </div>
 
   <div class="oprt-btn" ref="btn" v-show="showBtn">
-    <div>新增</div>
-    <div>删除</div>
+    <div class="add" @click="addTag">新增节点</div>
+    <div class="del" @click="delTag">删除节点</div>
   </div>
 </template>
 
@@ -38,9 +38,9 @@ onMounted(() => {
 const setInitData = () => {
   console.log(treeData)
   const data = JSON.parse(JSON.stringify(treeData))
-  treeData.children.forEach(function (datum, index) {
-    index % 2 === 0 && (datum.collapsed = true)
-  })
+  // treeData.children.forEach(function (datum, index) {
+    // index % 2 === 0 && (datum.collapsed = true)
+  // })
   let option = {
     tooltip: {
       trigger: 'item',
@@ -107,28 +107,48 @@ const setInitData = () => {
     ],
   }
   myChart?.setOption(option)
+
+  bindEvents()
 }
 
-const append = (data: Tree) => {
-  const newChild = { id: id++, label: 'testtest', children: [] }
-  if (!data.children) {
-    data.children = []
-  }
-  data.children.push(newChild)
-  dataSource.value = [...dataSource.value]
+
+
+function bindEvents() {
+
+const main = document.querySelector('#hChart')
+console.log(main)
+const btn = document.querySelector('.oprt-btn')
+main?.addEventListener('click', () => {
+  showBtn.value = false
+})
+main?.addEventListener('contextmenu', function(e) { e.preventDefault(); return false })
+  var gloab_param=null;
+  myChart.on("contextmenu", function(params){
+    console.log(params, btn)
+    showBtn.value = true
+    const x = params.event.event.pageX
+    const y = params.event.event.pageY
+    btn.style.left= x + 'px'
+    btn.style.top= y + 'px'
+  });
+  /**
+   * 点击画布的时候隐藏右键菜单
+   */
+  // $('.tree-container').click(function () {
+  //     $('#rightMenu').css({
+  //         'display': 'none',
+  //         'left': '-9999px',
+  //         'top': '-9999px'
+  //     });
+  // });
 }
 
-const remove = (node: Node, data: Tree) => {
-  const parent = node.parent
-  const children: Tree[] = parent.data.children || parent.data
-  const index = children.findIndex(d => d.id === data.id)
-  children.splice(index, 1)
-  dataSource.value = [...dataSource.value]
+const addTag = (data: Tree) => {
+  showBtn.value = false
 }
 
-const handleLabel = (data: any) => {
-  console.log(data)
-  console.log(dataSource.value)
+const delTag = (node: Node, data: Tree) => {
+  showBtn.value = false
 }
 
 const dataSource = ref<Tree[]>([])
@@ -165,6 +185,20 @@ const dataSource = ref<Tree[]>([])
 
 .oprt-btn {
   position: fixed;
+  background: #fff;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 168px;
+  z-index: 100;
+  padding: 6px 0;
+  .add, .del {
+    cursor: pointer;
+    line-height: 40px;
+    padding: 0 12px;
+    &:hover {
+      background: #f5f5f5;
+    } 
+  }
   // visibility: hidden;
 }
 </style>

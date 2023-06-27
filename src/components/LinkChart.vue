@@ -3,26 +3,35 @@
 
 <script lang="ts" setup>
 import * as echarts from 'echarts'
-import { onMounted } from 'vue'
-import * as graph from '@/assets/chart.json'
+import { onMounted, watch } from 'vue'
+// import * as graph from '@/assets/chart.json'
 
 let myChart = null
 
-onMounted(() => {
-  initChart()
+const props = defineProps<{
+  data: any
+}>()
+
+watch(() => props.data, (val) => {
+  console.log(val)
+  initChart(val)
 })
 
-function initChart() {
+onMounted(() => {
+  // initChart()
+})
+
+function initChart(graph) {
   myChart = echarts.init(document.querySelector('#chart'))
 
   graph.nodes.forEach(function (node) {
+    node.symbolSize = 40
     node.label = {
-      show: node.symbolSize > 30
+      show: node.name.length < 30
     };
-  });
 
-  myChart?.setOption(option)
-}
+  });
+  
 
 const option = {
   tooltip: {},
@@ -69,13 +78,18 @@ const option = {
         // curveness: 0.3,
       },
       emphasis: {
+        // disabled: false,
         focus: 'adjacency',
         lineStyle: {
           width: 10
         }
-      }
+      },
     },
   ],
+}
+
+  myChart?.setOption(option)
+
 }
 </script>
 
