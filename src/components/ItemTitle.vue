@@ -1,6 +1,6 @@
 <template>
   <div class="flex wrap">
-    <div class="left"></div>
+    <div class="left" :style="{backgroundImage: `url(/public/testdata/imgs/${data.picture})`}"></div>
     <div class="right">
       <div class="cursor-pointer title">{{ data.title }}</div>
       <div class="desc truncate">{{ data.content }}</div>

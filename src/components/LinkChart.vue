@@ -13,7 +13,6 @@ const props = defineProps<{
 }>()
 
 watch(() => props.data, (val) => {
-  console.log(val)
   initChart(val)
 })
 
@@ -27,69 +26,79 @@ function initChart(graph) {
   graph.nodes.forEach(function (node) {
     node.symbolSize = 40
     node.label = {
-      show: node.name.length < 30
+      show: true
     };
-
   });
-  
 
-const option = {
-  tooltip: {},
-  legend: [
-    {
-      data: graph.categories.map(function (a) {
-        return a.name
-      }),
-    },
-  ],
-  animationDuration: 1000,
-  animationEasingUpdate: 'quinticInOut',
-  series: [
-    {
-      name: '图谱',
-      type: 'graph',
-      layout: 'force',
-      // layout: 'none',
-      data: graph.nodes,
-      links: graph.links,
-      categories: graph.categories,
-      roam: true,
-      label: {
-        show: true,
-        formatter: '{b}',
+  const option = {
+    tooltip: {},
+    legend: [
+      {
+        data: graph.categories.map(function (a) {
+          return a.name
+        }),
       },
-      force: {
-        repulsion: 1000,
-        edgeLength: [2, 10],
-        layoutAnimation: true,
-        gravity: 0.4,
-        friction: 0.1
-      },
-      labelLayout: {
-        hideOverlap: true,
-      },
-      draggable: true,
-      scaleLimit: {
-        min: 0.2,
-        max: 2,
-      },
-      lineStyle: {
-        color: 'source',
-        // curveness: 0.3,
-      },
-      emphasis: {
-        // disabled: false,
-        focus: 'adjacency',
+    ],
+    animationDuration: 1000,
+    animationEasingUpdate: 'quinticInOut',
+    series: [
+      {
+        name: '图谱',
+        type: 'graph',
+        layout: 'force',
+        // layout: 'none',
+        data: graph.nodes,
+        links: graph.links,
+        categories: graph.categories,
+        roam: true,
+        label: {
+          show: true,
+          formatter: (params) => {
+            if (params.name.length < 4) {
+              return params.name
+            } else {
+              return params.name.slice(0,3) + '...'
+            }
+          }
+        },
+        force: {
+          repulsion: 1000,
+          edgeLength: [2, 10],
+          layoutAnimation: true,
+          gravity: 0.4,
+          friction: 0.1
+        },
+        labelLayout: {
+          hideOverlap: true,
+        },
+        draggable: true,
+        scaleLimit: {
+          min: 0.2,
+          max: 2,
+        },
         lineStyle: {
-          width: 10
-        }
+          color: 'source',
+          // curveness: 0.3,
+        },
+        emphasis: {
+          // disabled: false,
+          focus: 'adjacency',
+          lineStyle: {
+            width: 10
+          },
+          edgeLabel: {
+            show: true,
+            formatter: (params) =>  {
+              console.log(params)
+              return params.data.label
+            }
+          }
+        },
       },
-    },
-  ],
-}
+    ],
+  }
 
   myChart?.setOption(option)
-
 }
 </script>
 
